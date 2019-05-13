@@ -38,3 +38,4 @@ The exe file "reflector.exe" is located [here](/output/reflector.exe).
 - [PGC Coordinate Converter](https://www.pgc.umn.edu/apps/convert/)
 - [Simplekml lib](https://simplekml.readthedocs.io/en/latest/)
 - [Pyinstaller _datadir error](https://stackoverflow.com/questions/55824830/i-get-error-no-module-named-pyproj-datadir-after-i-made-py-to-exe-with-py)
+- [Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html)

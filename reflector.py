@@ -20,6 +20,7 @@ import re
 import glob
 import itertools
 import argparse
+import logging
 
 # Arg count
 ARGS = 5
@@ -28,7 +29,7 @@ ARGS = 5
 DRAWLINE = False
 
 # Remove last kml file generated
-REMOVEFILES = True
+REMOVEFILES = False
 
 # No data in tml file
 NODATA = "No Reflectors to output"
@@ -40,10 +41,11 @@ KML = ".kml"
 PADDLENAME = True
 
 # Radar position
-GV1LATITUDE = 6.098199
-GV1LONGITUDE = 46.2395083
+GV1LATITUDE =  6.098200
+GV1LONGITUDE = 46.239508
 GV2LATITUDE =  6.099153
 GV2LONGITUDE = 46.238859
+
 
 def main():
 
@@ -58,8 +60,17 @@ def main():
     global radarName
     inputFilePath = args.file.name
     radarName = args.rad
+    
+    # Set up logging to console and file
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s', datefmt='%d-%m-%Y %H:%M:%S', filename='reflector.log', filemode='a+')
+    console = logging.StreamHandler()
+    console.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+    console.setFormatter(formatter)
+    logging.getLogger('').addHandler(console)
+    logger = logging.getLogger('reflector.main')
 
-    # Ccheck arg count
+    # Check arg count
     if len(sys.argv) is ARGS:
 
         # Check radar name
@@ -68,7 +79,7 @@ def main():
             # Latidude and logitude radar pos
             global latitude
             global longitude
-            if radarName is "GV1":
+            if radarName.startswith("GV1"):
                 latitude = GV1LATITUDE
                 longitude = GV1LONGITUDE
             else:
@@ -89,16 +100,20 @@ def main():
                 # Generate kml file
                 get_reflector_datas(inputFilePath)
             else:
-                print("Reflector file not found")
+                logger.error('Reflector file not found')
         else:
-            print("Radar name not valid")
+            logger.error('Radar name not valid')
     else:
-        print("Too many arguments")
+        logger.error('Too many arguments')
 
 
 # Get reflectors data from file
 def get_reflector_datas(inputFilePath):
+
+    # Define logger
+    logger = logging.getLogger(f'{Path(__file__).stem}.{str(get_reflector_datas.__qualname__)}')
     try:
+
         # Read reflector file
         with open(inputFilePath) as f:
 
@@ -129,17 +144,22 @@ def get_reflector_datas(inputFilePath):
             calc_reflect_data(check_no_data(content[cdrIndex + shift:ncdrIndex]), os.path.join(p.parent, f'{fileName}-current-dynamic-{date}{KML}'), "cdf", "Current dynamic")
             calc_reflect_data(check_no_data(content[ncdrIndex + shift:len(content)]), os.path.join(p.parent, f'{fileName}-non-current-dynamic-{date}{KML}'), "ncdf", "Non-current dynamic")
         else:
-            print("Reflector file struct not valid")
+            logger.error('Reflector file not valid')
     except IndexError:
-        print("Reflector file not valid")
+        logger.error("Reflector file struct not valid (list error)")
     except ValueError:
-        print("Cast value error")
+        logger.error('Cast value error')
     except FileNotFoundError:
-        print("Reflector file not found")
+        logger.error('Reflector file not found')
+    except Exception as ex:
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}') 
 
 
 # Calc all reflector and add pos (latitude, long) into kml file
 def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFullName):
+
+    # Define logger
+    logger = logging.getLogger(f'{Path(__file__).stem}.{str(calc_reflect_data.__qualname__)}')
     try:
 
         # Check if data are ot empty
@@ -199,9 +219,11 @@ def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFu
                             line.style.linestyle.color = simplekml.Color.red
                             line.style.linestyle.width = 1
                 kml.save(outputFilePath)
-                print("KML file generated: " + outputFilePath)
+                logger.info("KML file generated: " + outputFilePath)
     except ValueError:
-        print("Cast value error")
+        logger.error("Cast value error")
+    except Exception as ex:
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}') 
 
 
 # Convert Nm to m
@@ -219,6 +241,9 @@ def check_no_data(data):
 
 # Check file
 def check_file(inputFilePath):
+
+    # Define logger
+    logger = logging.getLogger(f'{Path(__file__).stem}.{str(check_file.__qualname__)}')
     try:
 
         # Check if file path is string
@@ -229,27 +254,40 @@ def check_file(inputFilePath):
                 return True
         return False
     except FileNotFoundError:
-        print("File not found")
+        logger.error("file not found")
+    except Exception as ex:
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}') 
 
 
 # Get paddle image ref
 def get_paddle_image():
+    
+    # Define logger
+    logger = logging.getLogger(f'{Path(__file__).stem}.{str(get_paddle_image.__qualname__)}')
     try:
         return f'https://maps.google.com/mapfiles/kml/paddle/{images.pop()}-blank.png'
     except IndexError:
-        print("paddle image error")
+        logger.error("paddle image ref error")
+        return f'https://maps.google.com/mapfiles/kml/paddle/wht-blank.png'
+    except Exception as ex:
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}')
         return f'https://maps.google.com/mapfiles/kml/paddle/wht-blank.png'
 
 
 # Remove last kml file generated
 def remove_last_kml_file():
+
+    # Define logger
+    logger = logging.getLogger(f'{Path(__file__).stem}.{str(remove_last_kml_file.__qualname__)}')
     try:
 
         # Get all last kml file
         for f in glob.glob(os.path.join(os.path.dirname(os.path.realpath(__file__)), f'*{KML}')):
             os.remove(f)
     except FileNotFoundError:
-        print("File to remove not found")
+        logger.error("File to remove not found")
+    except Exception as ex:
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}')
 
 
 # Entree main function
