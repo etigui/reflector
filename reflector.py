@@ -96,7 +96,6 @@ def main():
         print("Too many arguments")
 
 
-
 # Get reflectors data from file
 def get_reflector_datas(inputFilePath):
     try:
@@ -204,6 +203,7 @@ def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFu
     except ValueError:
         print("Cast value error")
 
+
 # Convert Nm to m
 def nm_to_m(nm):
     return nm * 1.85200 * 1000
@@ -250,7 +250,6 @@ def remove_last_kml_file():
             os.remove(f)
     except FileNotFoundError:
         print("File to remove not found")
-
 
 
 # Entree main function
