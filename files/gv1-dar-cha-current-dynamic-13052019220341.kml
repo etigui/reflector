@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="135">
+        <Style id="138">
+            <IconStyle id="140">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="141">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="139">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="144">
+            <IconStyle id="146">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="147">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="145">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="150">
+            <IconStyle id="152">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="153">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="151">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="156">
+            <IconStyle id="158">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="159">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="157">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="162">
+            <IconStyle id="164">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="165">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="163">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="168">
+            <IconStyle id="170">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="171">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="169">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Placemark id="137">
+            <name>cdf0</name>
+            <description>Ref type=Current dynamic
+Radar name=GV1
+Range=1.3 [Nm] \ 2.408 [km]
+Deg=114.63 [Deg]</description>
+            <styleUrl>#138</styleUrl>
+            <Point id="136">
+                <coordinates>6.126557228157218,46.23046804522734,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="143">
+            <name>cdf1</name>
+            <description>Ref type=Current dynamic
+Radar name=GV1
+Range=1.02 [Nm] \ 1.889 [km]
+Deg=76.82 [Deg]</description>
+            <styleUrl>#144</styleUrl>
+            <Point id="142">
+                <coordinates>6.122046892591023,46.24337001699139,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="149">
+            <name>cdf2</name>
+            <description>Ref type=Current dynamic
+Radar name=GV1
+Range=1.16 [Nm] \ 2.148 [km]
+Deg=177.71 [Deg]</description>
+            <styleUrl>#150</styleUrl>
+            <Point id="148">
+                <coordinates>6.099295983152462,46.2202000302492,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="155">
+            <name>cdf3</name>
+            <description>Ref type=Current dynamic
+Radar name=GV1
+Range=0.69 [Nm] \ 1.278 [km]
+Deg=103.01 [Deg]</description>
+            <styleUrl>#156</styleUrl>
+            <Point id="154">
+                <coordinates>6.114336568548031,46.236912827011516,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="161">
+            <name>cdf4</name>
+            <description>Ref type=Current dynamic
+Radar name=GV1
+Range=0.86 [Nm] \ 1.593 [km]
+Deg=115.58 [Deg]</description>
+            <styleUrl>#162</styleUrl>
+            <Point id="160">
+                <coordinates>6.116814933859286,46.23331353086609,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="167">
+            <name>cdf5</name>
+            <description>Ref type=Current dynamic
+Radar name=GV1
+Range=2.39 [Nm] \ 4.426 [km]
+Deg=104.92 [Deg]</description>
+            <styleUrl>#168</styleUrl>
+            <Point id="166">
+                <coordinates>6.1536233817943655,46.22922154792435,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
