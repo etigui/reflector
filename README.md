@@ -2,7 +2,7 @@
 Generating kml file from radar reflector file
 
 
-<p align="middle" ><img src="/images/reflector.png" alt="Reflector map" width="800"></p>
+<p align="middle" ><img src="/images/reflector.png" alt="Reflector map" width="700"></p>
 
 ## Make py to exe
 
