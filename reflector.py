@@ -64,7 +64,7 @@ GV2LONGITUDE = 46.238859
 def main():
 
     # Check user input arguments
-    parser = argparse.ArgumentParser(description='Generate kml file from radar reflector file')
+    parser = argparse.ArgumentParser(description='Generating kml file from radar reflector file')
     requiredArg = parser.add_argument_group('required arguments')
     requiredArg.add_argument('-r', '--radar', action="store", type=str, help='Radar name (ex: GV1)', required=True, default='GV1', dest="rad")
     requiredArg.add_argument('-f', '--file', action="store", type=argparse.FileType('r'), help='Reflector file (ex: DAR-CHB.TML)', required=True)
