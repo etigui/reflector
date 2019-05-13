@@ -2,14 +2,14 @@
 Generating kml file from radar reflector file
 
                  START      END      ORIENT     REV
-INDEX   RANGE   AZIMUTH   AZIMUTH   AZIMUTH     NUM   HITS
-         Nm       Deg       Deg       Deg
-00000      0.42     83.15     84.90    313.50  23548  02271
-00001      0.81     86.90     89.30     45.53  24241  07618
-00002      0.77     92.20     95.10     45.53  20066  00715
-00003      0.77     98.60    105.10     44.96  24407  11872
-00004      0.70    105.40    112.10     45.53  24418  03967
-00005      0.69    111.80    117.20     45.52  22739  01780
+    INDEX   RANGE   AZIMUTH   AZIMUTH   AZIMUTH     NUM   HITS
+            Nm       Deg       Deg       Deg
+    00000      0.42     83.15     84.90    313.50  23548  02271
+    00001      0.81     86.90     89.30     45.53  24241  07618
+    00002      0.77     92.20     95.10     45.53  20066  00715
+    00003      0.77     98.60    105.10     44.96  24407  11872
+    00004      0.70    105.40    112.10     45.53  24418  03967
+    00005      0.69    111.80    117.20     45.52  22739  01780
 
 <p align="middle" ><img src="/images/reflector.png" alt="Reflector map" width="600"></p>
 
