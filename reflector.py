@@ -1,5 +1,5 @@
 __author__ = "Etienne Guignard"
-__copyright__ = "Copyright 2007, The Cogent Project"
+__copyright__ = "Copyright 2019, Etienne Guignard"
 __credits__ = ["flaticon.com"]
 __license__ = "GPL"
 __version__ = "1.1.2"
