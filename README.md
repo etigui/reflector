@@ -1,13 +1,23 @@
-# reflector
+# Reflector
 Generating kml file from radar reflector file
 
+<p align="middle" ><img src="/images/reflector.png" alt="Reflector map" width="600"></p>
 
-<p align="middle" ><img src="/images/reflector.png" alt="Reflector map" width="700"></p>
+
+## Usage
+The exe file "reflector.exe" is located [here](/output/reflector.exe).
+
+    reflector.py -r <radar_name> -f <reflector_file>
+    [or]
+    reflector.exe -r <radar_name> -f <reflector_file>
 
 ## Make py to exe
 
     pip install pyinstaller
-    pyinstaller reflector.py
+    pyinstaller -y -F -i "radar.ico" "reflector.py"
+    [or]
+    pip install auto-py-to-exe
+    auto-py-to-exe
 
 ## Ref
 
