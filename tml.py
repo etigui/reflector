@@ -2,7 +2,7 @@ __author__ = "Etienne Guignard"
 __copyright__ = "Copyright 2019, Etienne Guignard"
 __credits__ = ["flaticon.com"]
 __license__ = "GPL"
-__version__ = "1.4.0"
+__version__ = "1.5.0"
 __maintainer__ = "Etienne Guignard"
 __email__ = "guignard.etienne@gmail.com"
 __status__ = "Production"
@@ -10,14 +10,6 @@ __status__ = "Production"
 import os
 import itertools
 from operator import itemgetter
-
-def main():
-    try:
-        tml = Tml("files\\DAR-CHA.TML")
-        fr = tml.get_ref_fr_table()
-        print(fr.refIndex)
-    except TmlError as msg:
-        print(msg)
 
 # Class to store data table
 class DataTable():
@@ -64,10 +56,6 @@ class Tml():
         self.__radarName = None
         self.__dataTable = []
 
-        #self.__frTable = None
-        #self.__cdrTable = None
-        #self.__ncdrTable = None
-
         # Process tml data file
         self.__process_data()
 
@@ -80,22 +68,8 @@ class Tml():
     def get_radar_channel(self):
         return self.__channelName
 
-    '''
-    # Get fixed reflectors data table
-    def get_ref_fr_table(self):
-        return self.__frTable
 
-
-    # Get current dynamic reflectors data table
-    def get_ref_cdr_table(self):
-        return self.__cdrTable
-
-
-    # Get non-current dynamic reflectors data table
-    def get_ref_ncdr_table(self):
-        return self.__ncdrTable
-    '''
-
+    # Get all data table
     def get_ref_data_table(self):
         return self.__dataTable
 
@@ -142,9 +116,6 @@ class Tml():
             self.__dataTable.append(self.__process_reflector_data(self.__check_no_data(self.__data[self.__SHIFT:cdrIndex]), self.__FR))
             self.__dataTable.append(self.__process_reflector_data(self.__check_no_data(self.__data[cdrIndex + self.__SHIFT:ncdrIndex]), self.__CDR))
             self.__dataTable.append(self.__process_reflector_data(self.__check_no_data(self.__data[ncdrIndex + self.__SHIFT:len(self.__data)]), self.__NCDR))
-            #self.__frTable = self.__process_reflector_data(self.__check_no_data(self.__data[self.__SHIFT:cdrIndex]), self.__FR)
-            #self.__cdrTable = self.__process_reflector_data(self.__check_no_data(self.__data[cdrIndex + self.__SHIFT:ncdrIndex]), self.__CDR)
-            #self.__ncdrTable = self.__process_reflector_data(self.__check_no_data(self.__data[ncdrIndex + self.__SHIFT:len(self.__data)]), self.__NCDR)
         except Exception as ex:
             raise TmlError("Process data table function error", str(ex))
 
@@ -237,7 +208,7 @@ class Tml():
 
     # Get reflector type  like (Non-current dynamic reflectors)
     def __get_reflector_type(self, name):
-        return name.lower().capitalize()
+        return name.lower().replace('reflectors','')
 
 
     # Get reflector type like (ndr)
@@ -247,9 +218,4 @@ class Tml():
 
     # Get reflector type like (non-current-dynamic-reflectors)
     def __get_reflector_type_minus(self, name):
-        return '-'.join(name.lower().replace('-',' ').split(" "))
-
-
-# Entree main function
-if __name__ == "__main__":
-    main()
+        return '-'.join(self.__get_reflector_type(name).replace('-',' ').split(" "))
