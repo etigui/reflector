@@ -39,3 +39,4 @@ The exe file "reflector.exe" is located [here](https://github.com/etigui/reflect
 - [Simplekml lib](https://simplekml.readthedocs.io/en/latest/)
 - [Pyinstaller _datadir error](https://stackoverflow.com/questions/55824830/i-get-error-no-module-named-pyproj-datadir-after-i-made-py-to-exe-with-py)
 - [Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html)
+- [The definitive guide to Python exceptions](https://julien.danjou.info/python-exceptions-guide/)
