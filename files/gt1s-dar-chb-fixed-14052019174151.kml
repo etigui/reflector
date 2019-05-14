@@ -334,12 +334,13 @@
         <Placemark id="3">
             <name>fr0</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.42 [Nm] \ 0.778 [km]
 Start az= 83.15 [Deg]
 End az=  84.9 [Deg]
 Orient az=  313.5 [Deg]
-Hits= 2271</description>
+Hits= 2214</description>
             <styleUrl>#4</styleUrl>
             <Point id="2">
                 <coordinates>6.108211729068329,46.240337964832776,0.0</coordinates>
@@ -348,12 +349,13 @@ Hits= 2271</description>
         <Placemark id="9">
             <name>fr1</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.81 [Nm] \ 1.500 [km]
 Start az= 86.9 [Deg]
 End az=  89.3 [Deg]
 Orient az=  45.53 [Deg]
-Hits= 7618</description>
+Hits= 7547</description>
             <styleUrl>#10</styleUrl>
             <Point id="8">
                 <coordinates>6.117617949440272,46.24022818397506,0.0</coordinates>
@@ -362,12 +364,13 @@ Hits= 7618</description>
         <Placemark id="15">
             <name>fr2</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.77 [Nm] \ 1.426 [km]
 Start az= 92.2 [Deg]
 End az=  95.1 [Deg]
 Orient az=  45.53 [Deg]
-Hits= 715</description>
+Hits= 680</description>
             <styleUrl>#16</styleUrl>
             <Point id="14">
                 <coordinates>6.116671054575848,46.23900666476435,0.0</coordinates>
@@ -376,12 +379,13 @@ Hits= 715</description>
         <Placemark id="21">
             <name>fr3</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.77 [Nm] \ 1.426 [km]
 Start az= 98.6 [Deg]
 End az=  105.1 [Deg]
 Orient az=  44.96 [Deg]
-Hits= 11872</description>
+Hits= 11648</description>
             <styleUrl>#22</styleUrl>
             <Point id="20">
                 <coordinates>6.11647516841342,46.23758113916514,0.0</coordinates>
@@ -390,12 +394,13 @@ Hits= 11872</description>
         <Placemark id="27">
             <name>fr4</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.7 [Nm] \ 1.296 [km]
 Start az= 105.4 [Deg]
 End az=  112.1 [Deg]
 Orient az=  45.53 [Deg]
-Hits= 3967</description>
+Hits= 3934</description>
             <styleUrl>#28</styleUrl>
             <Point id="26">
                 <coordinates>6.1143978902211185,46.23640380219568,0.0</coordinates>
@@ -404,12 +409,13 @@ Hits= 3967</description>
         <Placemark id="33">
             <name>fr5</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.69 [Nm] \ 1.278 [km]
 Start az= 111.8 [Deg]
 End az=  117.2 [Deg]
 Orient az=  45.52 [Deg]
-Hits= 1780</description>
+Hits= 1804</description>
             <styleUrl>#34</styleUrl>
             <Point id="32">
                 <coordinates>6.113575308716873,46.23523229719347,0.0</coordinates>
@@ -418,12 +424,13 @@ Hits= 1780</description>
         <Placemark id="39">
             <name>fr6</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.67 [Nm] \ 1.241 [km]
 Start az= 117.1 [Deg]
 End az=  122.2 [Deg]
 Orient az=  45.49 [Deg]
-Hits= 3276</description>
+Hits= 3605</description>
             <styleUrl>#40</styleUrl>
             <Point id="38">
                 <coordinates>6.1125130835073636,46.2344171123509,0.0</coordinates>
@@ -432,7 +439,8 @@ Hits= 3276</description>
         <Placemark id="45">
             <name>fr7</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.65 [Nm] \ 1.204 [km]
 Start az= 129.4 [Deg]
 End az=  134.1 [Deg]
@@ -446,12 +454,13 @@ Hits= 722</description>
         <Placemark id="51">
             <name>fr8</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.63 [Nm] \ 1.167 [km]
 Start az= 136.3 [Deg]
 End az=  142.92 [Deg]
 Orient az=  45.48 [Deg]
-Hits= 5083</description>
+Hits= 5124</description>
             <styleUrl>#52</styleUrl>
             <Point id="50">
                 <coordinates>6.108641267422367,46.23191620287302,0.0</coordinates>
@@ -460,12 +469,13 @@ Hits= 5083</description>
         <Placemark id="57">
             <name>fr9</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.92 [Nm] \ 1.704 [km]
 Start az= 171.9 [Deg]
 End az=  175.2 [Deg]
 Orient az=  97.98 [Deg]
-Hits= 6272</description>
+Hits= 5935</description>
             <styleUrl>#58</styleUrl>
             <Point id="56">
                 <coordinates>6.101298292501517,46.22433448586824,0.0</coordinates>
@@ -474,12 +484,13 @@ Hits= 6272</description>
         <Placemark id="63">
             <name>fr10</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 3.12 [Nm] \ 5.778 [km]
 Start az= 174.5 [Deg]
 End az=  176.25 [Deg]
 Orient az=  64.44 [Deg]
-Hits= 470</description>
+Hits= 481</description>
             <styleUrl>#64</styleUrl>
             <Point id="62">
                 <coordinates>6.105327680869828,46.1877718227956,0.0</coordinates>
@@ -488,12 +499,13 @@ Hits= 470</description>
         <Placemark id="69">
             <name>fr11</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.93 [Nm] \ 1.722 [km]
 Start az= 181.5 [Deg]
 End az=  183.2 [Deg]
 Orient az=  128.14 [Deg]
-Hits= 2925</description>
+Hits= 2904</description>
             <styleUrl>#70</styleUrl>
             <Point id="68">
                 <coordinates>6.097602639771214,46.22402188589925,0.0</coordinates>
@@ -502,12 +514,13 @@ Hits= 2925</description>
         <Placemark id="75">
             <name>fr12</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 1.12 [Nm] \ 2.074 [km]
 Start az= 185.2 [Deg]
 End az=  186.9 [Deg]
 Orient az=  111.45 [Deg]
-Hits= 566</description>
+Hits= 576</description>
             <styleUrl>#76</styleUrl>
             <Point id="74">
                 <coordinates>6.095748205777714,46.22092913182884,0.0</coordinates>
@@ -516,12 +529,13 @@ Hits= 566</description>
         <Placemark id="81">
             <name>fr13</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.98 [Nm] \ 1.815 [km]
 Start az= 186.7 [Deg]
 End az=  190.1 [Deg]
 Orient az=  111.51 [Deg]
-Hits= 14436</description>
+Hits= 14261</description>
             <styleUrl>#82</styleUrl>
             <Point id="80">
                 <coordinates>6.095442233809692,46.22329603319356,0.0</coordinates>
@@ -530,12 +544,13 @@ Hits= 14436</description>
         <Placemark id="87">
             <name>fr14</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.68 [Nm] \ 1.259 [km]
 Start az= 234.0 [Deg]
 End az=  235.7 [Deg]
 Orient az=  138.22 [Deg]
-Hits= 8897</description>
+Hits= 8622</description>
             <styleUrl>#88</styleUrl>
             <Point id="86">
                 <coordinates>6.08498916713599,46.23285462864738,0.0</coordinates>
@@ -544,12 +559,13 @@ Hits= 8897</description>
         <Placemark id="93">
             <name>fr15</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.9 [Nm] \ 1.667 [km]
 Start az= 235.0 [Deg]
 End az=  238.3 [Deg]
 Orient az=  139.84 [Deg]
-Hits= 20902</description>
+Hits= 20457</description>
             <styleUrl>#94</styleUrl>
             <Point id="92">
                 <coordinates>6.0804969359843755,46.230914826239534,0.0</coordinates>
@@ -558,12 +574,13 @@ Hits= 20902</description>
         <Placemark id="99">
             <name>fr16</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.67 [Nm] \ 1.241 [km]
 Start az= 238.3 [Deg]
 End az=  240.0 [Deg]
 Orient az=  136.73 [Deg]
-Hits= 7851</description>
+Hits= 7677</description>
             <styleUrl>#100</styleUrl>
             <Point id="98">
                 <coordinates>6.084511680444119,46.23364813436978,0.0</coordinates>
@@ -572,12 +589,13 @@ Hits= 7851</description>
         <Placemark id="105">
             <name>fr17</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.75 [Nm] \ 1.389 [km]
 Start az= 242.43 [Deg]
 End az=  245.89 [Deg]
 Orient az=  225.86 [Deg]
-Hits= 574</description>
+Hits= 556</description>
             <styleUrl>#106</styleUrl>
             <Point id="104">
                 <coordinates>6.08223635780468,46.233731085986015,0.0</coordinates>
@@ -586,12 +604,13 @@ Hits= 574</description>
         <Placemark id="111">
             <name>fr18</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.68 [Nm] \ 1.259 [km]
 Start az= 248.8 [Deg]
 End az=  253.4 [Deg]
 Orient az=  135.47 [Deg]
-Hits= 17533</description>
+Hits= 16418</description>
             <styleUrl>#112</styleUrl>
             <Point id="110">
                 <coordinates>6.082977941971828,46.235416954777065,0.0</coordinates>
@@ -600,12 +619,13 @@ Hits= 17533</description>
         <Placemark id="117">
             <name>fr19</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.66 [Nm] \ 1.222 [km]
 Start az= 259.62 [Deg]
 End az=  261.38 [Deg]
 Orient az=  135.32 [Deg]
-Hits= 706</description>
+Hits= 680</description>
             <styleUrl>#118</styleUrl>
             <Point id="116">
                 <coordinates>6.08261380427226,46.23753237762685,0.0</coordinates>
@@ -614,12 +634,13 @@ Hits= 706</description>
         <Placemark id="123">
             <name>fr20</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.71 [Nm] \ 1.315 [km]
 Start az= 262.9 [Deg]
 End az=  266.1 [Deg]
 Orient az=  135.42 [Deg]
-Hits= 2570</description>
+Hits= 2497</description>
             <styleUrl>#124</styleUrl>
             <Point id="122">
                 <coordinates>6.0812851975220585,46.23805175909644,0.0</coordinates>
@@ -628,7 +649,8 @@ Hits= 2570</description>
         <Placemark id="129">
             <name>fr21</name>
             <description>Type= Fixed
-Radar name= GV1
+Radar name= GT1S
+Radar channel= CHB
 Range= 0.48 [Nm] \ 0.889 [km]
 Start az= 270.2 [Deg]
 End az=  273.31 [Deg]
