@@ -2,7 +2,7 @@ __author__ = "Etienne Guignard"
 __copyright__ = "Copyright 2019, Etienne Guignard"
 __credits__ = ["flaticon.com"]
 __license__ = "GPL"
-__version__ = "1.4.0"
+__version__ = "1.5.0"
 __maintainer__ = "Etienne Guignard"
 __email__ = "guignard.etienne@gmail.com"
 __status__ = "Production"
@@ -156,7 +156,7 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel):
             p = Path(inputFilePath)
             date = datetime.datetime.now().strftime('%d%m%Y%H%M%S')
             fileName = f'{radarName.lower()}-{p.stem.lower()}'
-            outputFilePath = os.path.join(p.parent, f'{fileName}-{refDataTable.refTypeMinus}-{date}{KML}')
+            outputFilePath = os.path.join(p.parent, f'{fileName}-{refDataTable.refTypeMinus}{date}{KML}')
 
             # Init kml
             kml = simplekml.Kml()
