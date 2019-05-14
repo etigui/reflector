@@ -29,7 +29,7 @@ ARGS = 3
 DRAWLINE = False
 
 # Remove last kml file generated
-REMOVEFILES = True
+REMOVEFILES = False
 
 # No data in tml file
 NODATA = "No Reflectors to output"
