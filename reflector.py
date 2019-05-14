@@ -22,6 +22,8 @@ import itertools
 import argparse
 import logging
 
+from tml import Tml, TmlError
+
 # Arg count
 ARGS = 5
 
@@ -103,7 +105,7 @@ def main():
                 images = ["ltblu", "purple", "pink", "ylw", "grn", "blu", "red"]
 
                 # Generate kml file
-                get_reflector_datas(inputFilePath)
+                get_reflector_datas_2(inputFilePath)
             else:
                 logger.error('Reflector file not found')
         else:
@@ -112,12 +114,49 @@ def main():
         logger.error('Too many arguments')
 
 
+def get_reflector_datas_2(inputFilePath):
+
+    # Define logger
+    logger = logging.getLogger(f'{Path(__file__).stem}.{str(get_reflector_datas.__qualname__)}')
+    try:
+
+        # Get reflector data
+        tml = Tml(inputFilePath)
+        #RefDataTableFr = tml.get_ref_fr_table()
+        #RefDataTableCdr = tml.get_ref_cdr_table()
+        #RefDataTableNcdr = tml.get_ref_ncdr_table()
+        ##radarName = tml.get_radar_name()
+        radarChannel = tml.get_radar_channel()
+
+
+        refDataTable = tml.get_ref_data_table()
+
+        for rdt in refDataTable:
+
+            # Calc reflector and save it to kml file
+            calc_reflect_data_2(rdt, inputFilePath, radarChannel)
+            
+        
+         
+
+        #calc_reflect_data_2(RefDataTableFr, inputFilePath, radarChannel) 
+        #calc_reflect_data_2(RefDataTableCdr, inputFilePath, radarChannel)
+        #calc_reflect_data_2(RefDataTableNcdr, inputFilePath, radarChannel)
+
+    except TmlError as msg:
+        logger.error(f'Unexpected exception occurred: {msg}') 
+    except Exception as ex:
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}') 
+
+
 # Get reflectors data from file
 def get_reflector_datas(inputFilePath):
 
     # Define logger
     logger = logging.getLogger(f'{Path(__file__).stem}.{str(get_reflector_datas.__qualname__)}')
     try:
+
+        '''
 
         # Read reflector file
         with open(inputFilePath) as f:
@@ -153,6 +192,7 @@ def get_reflector_datas(inputFilePath):
             calc_reflect_data(check_no_data(content[ncdrIndex + shift:len(content)]), os.path.join(p.parent, f'{fileName}-non-current-dynamic-{date}{KML}'), "ncdf", "Non-current dynamic", radarChanel)
         else:
             logger.error('Reflector file not valid')
+        '''
     except IndexError:
         logger.error("Reflector file struct not valid (list error)")
     except ValueError:
@@ -161,6 +201,75 @@ def get_reflector_datas(inputFilePath):
         logger.error('Reflector file not found')
     except Exception as ex:
         logger.error(f'Unexpected exception occurred: {type(ex)} {ex}') 
+
+def calc_reflect_data_2(refDataTable, inputFilePath, radarChannel):
+
+    # Define logger
+    logger = logging.getLogger(f'{Path(__file__).stem}.{str(calc_reflect_data.__qualname__)}')
+    try:
+        
+        # Get paddle ref image
+        paddleImage = get_paddle_image()
+
+        if refDataTable.refIndex:
+
+            print(f'refDataTable: {refDataTable}')
+
+            # Build output kml file
+            p = Path(inputFilePath)
+            date = datetime.datetime.now().strftime('%d%m%Y%H%M%S')
+            fileName = f'{radarName.lower()}-{p.stem.lower()}'
+            outputFilePath = os.path.join(p.parent, f'{fileName}-{refDataTable.refTypeMinus}-{date}{KML}')
+
+            # Init kml
+            kml = simplekml.Kml()
+
+            # Angle correction
+            rotation = 90
+            delta = 2.13
+            correction = rotation - delta
+
+            # Convert radar deg coordinat (latitude, longitude) into UTM (Universal Transverse Mercator) coordinate [m]
+            utm = Proj(proj='utm', zone='32U', ellps='WGS84')
+            xUtm, yUtm = utm(latitude, longitude)
+
+            # Check is not empty
+            if refDataTable.refIndex and refDataTable.refRange and refDataTable.refStartAz and refDataTable.refEndAz and refDataTable.refOrAz and refDataTable.refHits:
+
+                # Iter all reflector
+                for (r, sa, ea, oa, h, i) in zip(refDataTable.refRange, refDataTable.refStartAz, refDataTable.refEndAz, refDataTable.refOrAz, refDataTable.refHits, refDataTable.refIndex):
+
+                    # Convert reflector "range" from Nm to m
+                    refRangeConv = nm_to_m(float(r))
+
+                    # Convert reflector "deg" to radian and add angle correction
+                    refDegConv = float(math.radians((correction - sa)))
+
+                    # Converting degrees to (x,y) coordinates
+                    x = (refRangeConv * float(math.cos(refDegConv))) + float(xUtm)
+                    y = (refRangeConv * float(math.sin(refDegConv))) + float(yUtm)
+
+                    # Convert UTM (Universal Transverse Mercator) coordinate into (latitude, longitude)
+                    refLongLat = utm(x, y, inverse=True)
+
+                    # Create new reflector point
+                    pnt = kml.newpoint(name=f'{refDataTable.refTypeAcronym}{i}', coords=[refLongLat], description=f'Type= {refDataTable.refType}\nRadar name= {radarName}\nRadar channel= {radarChannel}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
+                    pnt.style.labelstyle.color = simplekml.Color.white
+                    pnt.style.labelstyle.scale = 1.2 if PADDLENAME else 0
+                    pnt.style.iconstyle.icon.href = paddleImage
+
+                    # draw line from radar point to reflector point
+                    if DRAWLINE:
+                        line = kml.newlinestring(name=f'l{refDataTable.refTypeAcronym}{i}', description=f'Line from radar to refelctor {i}', coords=[(latitude, longitude), refLongLat])
+                        line.style.linestyle.color = simplekml.Color.red
+                        line.style.linestyle.width = 1
+            kml.save(outputFilePath)
+            logger.info("KML file generated: " + outputFilePath)
+    except ValueError:
+        logger.error("Cast value error")
+    except Exception as ex:
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}') 
+
 
 
 # Calc all reflector and add pos (latitude, long) into kml file
