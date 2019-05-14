@@ -46,6 +46,11 @@ GV1LONGITUDE = 46.239508
 GV2LATITUDE =  6.099153
 GV2LONGITUDE = 46.238859
 
+# Radar name
+GV1 = "GV1"
+GV2 = "GV2"
+RADARNAME = [GV1, GV2]
+
 
 def main():
 
@@ -74,12 +79,12 @@ def main():
     if len(sys.argv) is ARGS:
 
         # Check radar name
-        if radarName in ["GV1", "GV2"]:
+        if radarName in RADARNAME:
 
             # Latidude and logitude radar pos
             global latitude
             global longitude
-            if radarName.startswith("GV1"):
+            if radarName.startswith(GV1):
                 latitude = GV1LATITUDE
                 longitude = GV1LONGITUDE
             else:
@@ -91,7 +96,7 @@ def main():
 
                 # Remove last kml file generated
                 if REMOVEFILES:
-                    remove_last_kml_file()
+                    remove_last_kml_file(inputFilePath)
 
                 # Global paddle image ref list
                 global images
@@ -129,6 +134,9 @@ def get_reflector_datas(inputFilePath):
             # Clean up unwanted item
             content = [l for l in content if l not in ("START END ORIENT REV", "INDEX RANGE AZIMUTH AZIMUTH AZIMUTH NUM HITS", "Nm Deg Deg Deg")]
 
+            # Get radar channel
+            radarChanel = str([r.split(" ").pop() for r in content if r.startswith('FIXED REFLECTORS')].pop())
+
             # Search for start
             cdrIndex = int([i for i, j in zip(itertools.count(), content) if j.startswith('CURRENT DYNAMIC REFLECTORS')].pop())
             ncdrIndex = int([i for i, j in zip(itertools.count(), content) if j.startswith('NON-CURRENT DYNAMIC REFLECTORS')].pop())
@@ -140,9 +148,9 @@ def get_reflector_datas(inputFilePath):
 
             # Calc and slice reflector table with output kml file
             shift = 1
-            calc_reflect_data(check_no_data(content[shift:cdrIndex]), os.path.join(p.parent, f'{fileName}-fixed-{date}{KML}'), "fr", "Fixed")
-            calc_reflect_data(check_no_data(content[cdrIndex + shift:ncdrIndex]), os.path.join(p.parent, f'{fileName}-current-dynamic-{date}{KML}'), "cdf", "Current dynamic")
-            calc_reflect_data(check_no_data(content[ncdrIndex + shift:len(content)]), os.path.join(p.parent, f'{fileName}-non-current-dynamic-{date}{KML}'), "ncdf", "Non-current dynamic")
+            calc_reflect_data(check_no_data(content[shift:cdrIndex]), os.path.join(p.parent, f'{fileName}-fixed-{date}{KML}'), "fr", "Fixed", radarChanel)
+            calc_reflect_data(check_no_data(content[cdrIndex + shift:ncdrIndex]), os.path.join(p.parent, f'{fileName}-current-dynamic-{date}{KML}'), "cdf", "Current dynamic", radarChanel)
+            calc_reflect_data(check_no_data(content[ncdrIndex + shift:len(content)]), os.path.join(p.parent, f'{fileName}-non-current-dynamic-{date}{KML}'), "ncdf", "Non-current dynamic", radarChanel)
         else:
             logger.error('Reflector file not valid')
     except IndexError:
@@ -156,7 +164,7 @@ def get_reflector_datas(inputFilePath):
 
 
 # Calc all reflector and add pos (latitude, long) into kml file
-def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFullName):
+def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFullName, radarChanel):
 
     # Define logger
     logger = logging.getLogger(f'{Path(__file__).stem}.{str(calc_reflect_data.__qualname__)}')
@@ -211,7 +219,7 @@ def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFu
                         refLongLat = utm(x, y, inverse=True)
 
                         # Create new reflector point
-                        pnt = kml.newpoint(name=f'{reflectionTypeName}{i}', coords=[refLongLat], description=f'Type= {reflectionTypeFullName}\nRadar name= {radarName}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
+                        pnt = kml.newpoint(name=f'{reflectionTypeName}{i}', coords=[refLongLat], description=f'Type= {reflectionTypeFullName}\nRadar name= {radarName}\nRadar channel= {radarChanel}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
                         pnt.style.labelstyle.color = simplekml.Color.white
                         pnt.style.labelstyle.scale = 1.2 if PADDLENAME else 0
                         pnt.style.iconstyle.icon.href = paddleImage
@@ -278,14 +286,14 @@ def get_paddle_image():
 
 
 # Remove last kml file generated
-def remove_last_kml_file():
+def remove_last_kml_file(inputFilePath):
 
     # Define logger
     logger = logging.getLogger(f'{Path(__file__).stem}.{str(remove_last_kml_file.__qualname__)}')
     try:
 
         # Get all last kml file
-        for f in glob.glob(os.path.join(os.path.dirname(os.path.realpath(__file__)), f'*{KML}')):
+        for f in glob.glob(os.path.join(os.path.dirname(inputFilePath), f'*{KML}')):
             os.remove(f)
     except FileNotFoundError:
         logger.error("File to remove not found")
