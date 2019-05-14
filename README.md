@@ -15,11 +15,11 @@ Generating kml file from radar reflector file
 
 
 ## Usage
-The exe file "reflector.exe" is located [here](/output/reflector.exe).
+The exe file "reflector.exe" is located [here](https://github.com/etigui/reflector/raw/rname/output/reflector.exe).
 
-    reflector.py -r <radar_name> -f <reflector_file>
+    reflector.py -f <reflector_file>
     [or]
-    reflector.exe -r <radar_name> -f <reflector_file>
+    reflector.exe -f <reflector_file>
 
 ## Make py to exe
 
