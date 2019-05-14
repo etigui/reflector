@@ -171,7 +171,10 @@ def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFu
                 # Map each element and cast into adequate type
                 refIndex = [int(e) for e in list(map(itemgetter(0), data))]
                 refRange = [float(e) for e in list(map(itemgetter(1), data))]
-                refDeg = [float(e) for e in list(map(itemgetter(2), data))]
+                refStartAz = [float(e) for e in list(map(itemgetter(2), data))]
+                refEndAz = [float(e) for e in list(map(itemgetter(3), data))]
+                refOrAz = [float(e) for e in list(map(itemgetter(4), data))]
+                refHits = [int(e) for e in list(map(itemgetter(6), data))]
 
                 # Init kml
                 kml = simplekml.Kml()
@@ -186,19 +189,19 @@ def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFu
                 xUtm, yUtm = utm(latitude, longitude)
 
                 # Check is list has the same length
-                if refIndex and refRange and refDeg:
+                if refIndex and refRange and refStartAz and refEndAz and refOrAz and refHits:
                     
                     # Get paddle ref image
                     paddleImage = get_paddle_image()
 
                     # Iter all reflector
-                    for (r, d, i) in zip(refRange, refDeg, refIndex):
+                    for (r, sa, ea, oa, h, i) in zip(refRange, refStartAz, refEndAz, refOrAz, refHits, refIndex):
                         
                         # Convert reflector "range" from Nm to m
                         refRangeConv = nm_to_m(float(r))
 
                         # Convert reflector "deg" to radian and add angle correction
-                        refDegConv = float(math.radians((correction - d)))
+                        refDegConv = float(math.radians((correction - sa)))
 
                         # Converting degrees to (x,y) coordinates
                         x = (refRangeConv * float(math.cos(refDegConv))) + float(xUtm)
@@ -208,7 +211,7 @@ def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFu
                         refLongLat = utm(x, y, inverse=True)
 
                         # Create new reflector point
-                        pnt = kml.newpoint(name=f'{reflectionTypeName}{i}', coords=[refLongLat], description=f'Ref type={reflectionTypeFullName}\nRadar name={radarName}\nRange={r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nDeg={d} [Deg]')
+                        pnt = kml.newpoint(name=f'{reflectionTypeName}{i}', coords=[refLongLat], description=f'Type= {reflectionTypeFullName}\nRadar name= {radarName}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
                         pnt.style.labelstyle.color = simplekml.Color.white
                         pnt.style.labelstyle.scale = 1.2 if PADDLENAME else 0
                         pnt.style.iconstyle.icon.href = paddleImage

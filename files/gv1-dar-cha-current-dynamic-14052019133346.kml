@@ -93,10 +93,13 @@
         </Style>
         <Placemark id="137">
             <name>cdf0</name>
-            <description>Ref type=Current dynamic
-Radar name=GV1
-Range=1.3 [Nm] \ 2.408 [km]
-Deg=114.63 [Deg]</description>
+            <description>Type= Current dynamic
+Radar name= GV1
+Range= 1.3 [Nm] \ 2.408 [km]
+Start az= 114.63 [Deg]
+End az=  115.75 [Deg]
+Orient az=  36.84 [Deg]
+Hits= 3</description>
             <styleUrl>#138</styleUrl>
             <Point id="136">
                 <coordinates>6.126557228157218,46.23046804522734,0.0</coordinates>
@@ -104,10 +107,13 @@ Deg=114.63 [Deg]</description>
         </Placemark>
         <Placemark id="143">
             <name>cdf1</name>
-            <description>Ref type=Current dynamic
-Radar name=GV1
-Range=1.02 [Nm] \ 1.889 [km]
-Deg=76.82 [Deg]</description>
+            <description>Type= Current dynamic
+Radar name= GV1
+Range= 1.02 [Nm] \ 1.889 [km]
+Start az= 76.82 [Deg]
+End az=  77.92 [Deg]
+Orient az=  45.6 [Deg]
+Hits= 1</description>
             <styleUrl>#144</styleUrl>
             <Point id="142">
                 <coordinates>6.122046892591023,46.24337001699139,0.0</coordinates>
@@ -115,10 +121,13 @@ Deg=76.82 [Deg]</description>
         </Placemark>
         <Placemark id="149">
             <name>cdf2</name>
-            <description>Ref type=Current dynamic
-Radar name=GV1
-Range=1.16 [Nm] \ 2.148 [km]
-Deg=177.71 [Deg]</description>
+            <description>Type= Current dynamic
+Radar name= GV1
+Range= 1.16 [Nm] \ 2.148 [km]
+Start az= 177.71 [Deg]
+End az=  178.81 [Deg]
+Orient az=  141.84 [Deg]
+Hits= 1</description>
             <styleUrl>#150</styleUrl>
             <Point id="148">
                 <coordinates>6.099295983152462,46.2202000302492,0.0</coordinates>
@@ -126,10 +135,13 @@ Deg=177.71 [Deg]</description>
         </Placemark>
         <Placemark id="155">
             <name>cdf3</name>
-            <description>Ref type=Current dynamic
-Radar name=GV1
-Range=0.69 [Nm] \ 1.278 [km]
-Deg=103.01 [Deg]</description>
+            <description>Type= Current dynamic
+Radar name= GV1
+Range= 0.69 [Nm] \ 1.278 [km]
+Start az= 103.01 [Deg]
+End az=  104.57 [Deg]
+Orient az=  315.2 [Deg]
+Hits= 7</description>
             <styleUrl>#156</styleUrl>
             <Point id="154">
                 <coordinates>6.114336568548031,46.236912827011516,0.0</coordinates>
@@ -137,10 +149,13 @@ Deg=103.01 [Deg]</description>
         </Placemark>
         <Placemark id="161">
             <name>cdf4</name>
-            <description>Ref type=Current dynamic
-Radar name=GV1
-Range=0.86 [Nm] \ 1.593 [km]
-Deg=115.58 [Deg]</description>
+            <description>Type= Current dynamic
+Radar name= GV1
+Range= 0.86 [Nm] \ 1.593 [km]
+Start az= 115.58 [Deg]
+End az=  116.67 [Deg]
+Orient az=  312.43 [Deg]
+Hits= 1</description>
             <styleUrl>#162</styleUrl>
             <Point id="160">
                 <coordinates>6.116814933859286,46.23331353086609,0.0</coordinates>
@@ -148,10 +163,13 @@ Deg=115.58 [Deg]</description>
         </Placemark>
         <Placemark id="167">
             <name>cdf5</name>
-            <description>Ref type=Current dynamic
-Radar name=GV1
-Range=2.39 [Nm] \ 4.426 [km]
-Deg=104.92 [Deg]</description>
+            <description>Type= Current dynamic
+Radar name= GV1
+Range= 2.39 [Nm] \ 4.426 [km]
+Start az= 104.92 [Deg]
+End az=  106.02 [Deg]
+Orient az=  296.81 [Deg]
+Hits= 1</description>
             <styleUrl>#168</styleUrl>
             <Point id="166">
                 <coordinates>6.1536233817943655,46.22922154792435,0.0</coordinates>
