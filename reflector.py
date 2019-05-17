@@ -111,11 +111,16 @@ def get_reflector_datas(inputFilePath):
         radarChannel = tml.get_radar_channel()
         refDataTable = tml.get_ref_data_table()
 
-        # Get all reflector data table
-        for rdt in refDataTable:
+        # Check if radar name exist
+        if radarName in GV1 or radarName in GV2:
 
-            # Calc reflector and save it to kml file
-            calc_reflector_data(rdt, inputFilePath, radarChannel, radarName)
+            # Get all reflector data table
+            for rdt in refDataTable:
+
+                # Calc reflector and save it to kml file
+                calc_reflector_data(rdt, inputFilePath, radarChannel, radarName)
+        else:
+            logger.error("Radar name not valid")
     except TmlError as msg:
         logger.error(f'Unexpected exception occurred: {msg}')
     except Exception as ex:
@@ -137,58 +142,55 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
 
             # Get radar pos (lat, long) from randar name
             latitude, longitude = get_radar_lat_long(radarName)
-            if latitude and longitude:
 
-                # Build output kml file
-                p = Path(inputFilePath)
-                date = datetime.datetime.now().strftime('%d%m%Y%H%M%S')
-                fileName = f'{radarName.lower()}-{p.stem.lower()}'
-                outputFilePath = os.path.join(p.parent, f'{fileName}-{refDataTable.refTypeMinus}{date}{KML}')
+            # Build output kml file
+            p = Path(inputFilePath)
+            date = datetime.datetime.now().strftime('%d%m%Y%H%M%S')
+            fileName = f'{radarName.lower()}-{p.stem.lower()}'
+            outputFilePath = os.path.join(p.parent, f'{fileName}-{refDataTable.refTypeMinus}{date}{KML}')
 
-                # Init kml
-                kml = simplekml.Kml()
+            # Init kml
+            kml = simplekml.Kml()
 
-                # Angle radar correction
-                correction = ROTATION - DELTA
+            # Angle radar correction
+            correction = ROTATION - DELTA
 
-                # Convert radar deg coordinat (latitude, longitude) into UTM (Universal Transverse Mercator) coordinate [m]
-                utm = Proj(proj='utm', zone='32U', ellps='WGS84')
-                xUtm, yUtm = utm(latitude, longitude)
+            # Convert radar deg coordinat (latitude, longitude) into UTM (Universal Transverse Mercator) coordinate [m]
+            utm = Proj(proj='utm', zone='32U', ellps='WGS84')
+            xUtm, yUtm = utm(latitude, longitude)
 
-                # Check is not empty
-                if refDataTable.refIndex and refDataTable.refRange and refDataTable.refStartAz and refDataTable.refEndAz and refDataTable.refOrAz and refDataTable.refHits:
+            # Check is not empty
+            if refDataTable.refIndex and refDataTable.refRange and refDataTable.refStartAz and refDataTable.refEndAz and refDataTable.refOrAz and refDataTable.refHits:
 
-                    # Iter all reflector
-                    for (r, sa, ea, oa, h, i) in zip(refDataTable.refRange, refDataTable.refStartAz, refDataTable.refEndAz, refDataTable.refOrAz, refDataTable.refHits, refDataTable.refIndex):
+                # Iter all reflector
+                for (r, sa, ea, oa, h, i) in zip(refDataTable.refRange, refDataTable.refStartAz, refDataTable.refEndAz, refDataTable.refOrAz, refDataTable.refHits, refDataTable.refIndex):
 
-                        # Convert reflector "range" from Nm to m
-                        refRangeConv = nm_to_m(float(r))
+                    # Convert reflector "range" from Nm to m
+                    refRangeConv = nm_to_m(float(r))
 
-                        # Convert reflector "deg" to radian and add angle correction
-                        refDegConv = float(math.radians((correction - sa)))
+                    # Convert reflector "deg" to radian and add angle correction
+                    refDegConv = float(math.radians((correction - sa)))
 
-                        # Converting degrees to (x,y) coordinates
-                        x = (refRangeConv * float(math.cos(refDegConv))) + float(xUtm)
-                        y = (refRangeConv * float(math.sin(refDegConv))) + float(yUtm)
+                    # Converting degrees to (x,y) coordinates
+                    x = (refRangeConv * float(math.cos(refDegConv))) + float(xUtm)
+                    y = (refRangeConv * float(math.sin(refDegConv))) + float(yUtm)
 
-                        # Convert UTM (Universal Transverse Mercator) coordinate into (latitude, longitude)
-                        refLongLat = utm(x, y, inverse=True)
+                    # Convert UTM (Universal Transverse Mercator) coordinate into (latitude, longitude)
+                    refLongLat = utm(x, y, inverse=True)
 
-                        # Create new reflector point
-                        pnt = kml.newpoint(name=f'{refDataTable.refTypeAcronym}{i}', coords=[refLongLat], description=f'Type= {refDataTable.refType}\nRadar name= {radarName}\nRadar channel= {radarChannel}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
-                        pnt.style.labelstyle.color = simplekml.Color.white
-                        pnt.style.labelstyle.scale = 1.2 if PADDLENAME else 0
-                        pnt.style.iconstyle.icon.href = paddleImage
+                    # Create new reflector point
+                    pnt = kml.newpoint(name=f'{refDataTable.refTypeAcronym}{i}', coords=[refLongLat], description=f'Type= {refDataTable.refType}\nRadar name= {radarName}\nRadar channel= {radarChannel}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
+                    pnt.style.labelstyle.color = simplekml.Color.white
+                    pnt.style.labelstyle.scale = 1.2 if PADDLENAME else 0
+                    pnt.style.iconstyle.icon.href = paddleImage
 
-                        # draw line from radar point to reflector point
-                        if DRAWLINE:
-                            line = kml.newlinestring(name=f'l{refDataTable.refTypeAcronym}{i}', description=f'Line from radar to refelctor {i}', coords=[(latitude, longitude), refLongLat])
-                            line.style.linestyle.color = simplekml.Color.red
-                            line.style.linestyle.width = 1
-                kml.save(outputFilePath)
-                logger.info("KML file generated: " + outputFilePath)
-            else:
-                logger.error("Radar name not valid")
+                    # draw line from radar point to reflector point
+                    if DRAWLINE:
+                        line = kml.newlinestring(name=f'l{refDataTable.refTypeAcronym}{i}', description=f'Line from radar to refelctor {i}', coords=[(latitude, longitude), refLongLat])
+                        line.style.linestyle.color = simplekml.Color.red
+                        line.style.linestyle.width = 1
+            kml.save(outputFilePath)
+            logger.info("KML file generated: " + outputFilePath)
     except ValueError:
         logger.error("Cast value error")
     except Exception as ex:
@@ -256,10 +258,8 @@ def remove_last_kml_file(inputFilePath):
 def get_radar_lat_long(radarName):
     if radarName in GV1:
         return GV1LATITUDE, GV1LONGITUDE
-    elif radarName in GV2:
-        return GV2LATITUDE, GV2LONGITUDE
     else:
-        return None, None
+        return GV2LATITUDE, GV2LONGITUDE
 
 
 # Entree main function
