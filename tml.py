@@ -151,8 +151,8 @@ class Tml():
             # Remove empty list item
             self.__data = list(filter(None, self.__data))
 
-            # Clean up unwanted item
-            return [l for l in self.__data if l not in ("START END ORIENT REV", "INDEX RANGE AZIMUTH AZIMUTH AZIMUTH NUM HITS", "Nm Deg Deg Deg")]
+            # Clean up unwanted item (_)
+            return [l for l in self.__data if l not in ("START END ORIENT REV", "INDEX RANGE AZIMUTH AZIMUTH AZIMUTH NUM HITS", "Nm Deg Deg Deg", "_")]
         except Exception as ex:
             raise TmlError("Clean up function error", str(ex))
 
