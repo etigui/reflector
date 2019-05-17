@@ -42,10 +42,10 @@ KML = ".kml"
 PADDLENAME = True
 
 # Radar position
-GV1LATITUDE =  6.098200
-GV1LONGITUDE = 46.239508
-GV2LATITUDE =  6.099153
-GV2LONGITUDE = 46.238859
+GV1LATITUDE = 46.239517
+GV1LONGITUDE = 6.098181 
+GV2LATITUDE = 46.238203
+GV2LONGITUDE = 6.100250
 
 # Radar name
 GV1 = ["GV1", "GV1S", "GT1S"]
@@ -140,8 +140,8 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
         # Check if data table is empty
         if refDataTable.refIndex:
 
-            # Get radar pos (lat, long) from randar name
-            latitude, longitude = get_radar_lat_long(radarName)
+            # Get radar pos (long, lat) from randar name
+            longitude, latitude = get_radar_lat_long(radarName)
 
             # Build output kml file
             p = Path(inputFilePath)
@@ -157,7 +157,7 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
 
             # Convert radar deg coordinat (latitude, longitude) into UTM (Universal Transverse Mercator) coordinate [m]
             utm = Proj(proj='utm', zone='32U', ellps='WGS84')
-            xUtm, yUtm = utm(latitude, longitude)
+            xUtm, yUtm = utm(longitude, latitude)
 
             # Check is not empty
             if refDataTable.refIndex and refDataTable.refRange and refDataTable.refStartAz and refDataTable.refEndAz and refDataTable.refOrAz and refDataTable.refHits:
@@ -186,7 +186,7 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
 
                     # draw line from radar point to reflector point
                     if DRAWLINE:
-                        line = kml.newlinestring(name=f'l{refDataTable.refTypeAcronym}{i}', description=f'Line from radar to refelctor {i}', coords=[(latitude, longitude), refLongLat])
+                        line = kml.newlinestring(name=f'l{refDataTable.refTypeAcronym}{i}', description=f'Line from radar to refelctor {i}', coords=[(longitude, latitude), refLongLat])
                         line.style.linestyle.color = simplekml.Color.red
                         line.style.linestyle.width = 1
             kml.save(outputFilePath)
@@ -257,9 +257,9 @@ def remove_last_kml_file(inputFilePath):
 # Get radar pos (lat, long) from randar name
 def get_radar_lat_long(radarName):
     if radarName in GV1:
-        return GV1LATITUDE, GV1LONGITUDE
+        return GV1LONGITUDE, GV1LATITUDE
     else:
-        return GV2LATITUDE, GV2LONGITUDE
+        return GV2LONGITUDE, GV2LATITUDE
 
 
 # Entree main function

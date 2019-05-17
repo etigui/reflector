@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="347">
+        <Style id="350">
+            <IconStyle id="352">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="353">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="351">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="356">
+            <IconStyle id="358">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="359">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="357">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="362">
+            <IconStyle id="364">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="365">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="363">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="368">
+            <IconStyle id="370">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="371">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="369">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Placemark id="349">
+            <name>ndr0</name>
+            <description>Type= non-current dynamic 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.78 [Nm] \ 1.445 [km]
+Start az= 105.03 [Deg]
+End az=  106.13 [Deg]
+Orient az=  312.81 [Deg]
+Hits= 1</description>
+            <styleUrl>#350</styleUrl>
+            <Point id="348">
+                <coordinates>6.118330252433748,46.234824496155525,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="355">
+            <name>ndr1</name>
+            <description>Type= non-current dynamic 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.26 [Nm] \ 0.482 [km]
+Start az= 216.41 [Deg]
+End az=  218.54 [Deg]
+Orient az=  140.92 [Deg]
+Hits= 14</description>
+            <styleUrl>#356</styleUrl>
+            <Point id="354">
+                <coordinates>6.096542409468907,46.23471896147996,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="361">
+            <name>ndr2</name>
+            <description>Type= non-current dynamic 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.12 [Nm] \ 0.222 [km]
+Start az= 311.81 [Deg]
+End az=  312.91 [Deg]
+Orient az=  225.93 [Deg]
+Hits= 4</description>
+            <styleUrl>#362</styleUrl>
+            <Point id="360">
+                <coordinates>6.098103927662376,46.239536492990894,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="367">
+            <name>ndr3</name>
+            <description>Type= non-current dynamic 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.77 [Nm] \ 1.426 [km]
+Start az= 114.52 [Deg]
+End az=  115.73 [Deg]
+Orient az=  312.36 [Deg]
+Hits= 2</description>
+            <styleUrl>#368</styleUrl>
+            <Point id="366">
+                <coordinates>6.11706149219983,46.23287151275658,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="1">
+        <Style id="4">
+            <IconStyle id="6">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="7">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="5">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="10">
+            <IconStyle id="12">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="13">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="11">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="16">
+            <IconStyle id="18">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="19">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="17">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="22">
+            <IconStyle id="24">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="25">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="23">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="28">
+            <IconStyle id="30">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="31">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="29">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="34">
+            <IconStyle id="36">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="37">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="35">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="40">
+            <IconStyle id="42">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="43">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="41">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="46">
+            <IconStyle id="48">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="49">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="47">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="52">
+            <IconStyle id="54">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="55">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="53">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="58">
+            <IconStyle id="60">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="61">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="59">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="64">
+            <IconStyle id="66">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="67">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="65">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="70">
+            <IconStyle id="72">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="73">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="71">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="76">
+            <IconStyle id="78">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="79">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="77">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="82">
+            <IconStyle id="84">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="85">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="83">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="88">
+            <IconStyle id="90">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="91">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="89">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="94">
+            <IconStyle id="96">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="97">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="95">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="100">
+            <IconStyle id="102">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="103">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="101">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="106">
+            <IconStyle id="108">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="109">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="107">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="112">
+            <IconStyle id="114">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="115">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="113">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="118">
+            <IconStyle id="120">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="121">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="119">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="124">
+            <IconStyle id="126">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="127">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="125">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="130">
+            <IconStyle id="132">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="133">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="131">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="136">
+            <IconStyle id="138">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="139">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="137">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="142">
+            <IconStyle id="144">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="145">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="143">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="148">
+            <IconStyle id="150">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="151">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="149">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="154">
+            <IconStyle id="156">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="157">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="155">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="160">
+            <IconStyle id="162">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="163">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="161">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="166">
+            <IconStyle id="168">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="169">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="167">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="172">
+            <IconStyle id="174">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="175">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="173">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="178">
+            <IconStyle id="180">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="181">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="179">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="184">
+            <IconStyle id="186">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="187">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="185">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="190">
+            <IconStyle id="192">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="193">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="191">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="196">
+            <IconStyle id="198">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="199">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="197">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="202">
+            <IconStyle id="204">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="205">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="203">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="208">
+            <IconStyle id="210">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="211">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="209">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="214">
+            <IconStyle id="216">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="217">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="215">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="220">
+            <IconStyle id="222">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="223">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="221">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="226">
+            <IconStyle id="228">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="229">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="227">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="232">
+            <IconStyle id="234">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="235">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="233">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="238">
+            <IconStyle id="240">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="241">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="239">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="244">
+            <IconStyle id="246">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="247">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="245">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="250">
+            <IconStyle id="252">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="253">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="251">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="256">
+            <IconStyle id="258">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="259">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="257">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="262">
+            <IconStyle id="264">
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+                <heading>0</heading>
+                <Icon id="265">
+                    <href>https://maps.google.com/mapfiles/kml/paddle/red-blank.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="263">
+                <color>ffffffff</color>
+                <colorMode>normal</colorMode>
+                <scale>1.2</scale>
+            </LabelStyle>
+        </Style>
+        <Placemark id="3">
+            <name>fr0</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.35 [Nm] \ 0.648 [km]
+Start az= 58.0 [Deg]
+End az=  75.0 [Deg]
+Orient az=  313.3 [Deg]
+Hits= 1310</description>
+            <styleUrl>#4</styleUrl>
+            <Point id="2">
+                <coordinates>6.107378557969586,46.24128930890312,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="9">
+            <name>fr1</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.95 [Nm] \ 1.759 [km]
+Start az= 71.0 [Deg]
+End az=  73.5 [Deg]
+Orient az=  45.34 [Deg]
+Hits= 296</description>
+            <styleUrl>#10</styleUrl>
+            <Point id="8">
+                <coordinates>6.121820006385621,46.24334395559321,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="15">
+            <name>fr2</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.7 [Nm] \ 1.296 [km]
+Start az= 79.0 [Deg]
+End az=  82.0 [Deg]
+Orient az=  45.5 [Deg]
+Hits= 8696</description>
+            <styleUrl>#16</styleUrl>
+            <Point id="14">
+                <coordinates>6.116748262072423,46.240419763385376,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="21">
+            <name>fr3</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.65 [Nm] \ 1.204 [km]
+Start az= 82.0 [Deg]
+End az=  92.5 [Deg]
+Orient az=  45.4 [Deg]
+Hits= 20558</description>
+            <styleUrl>#22</styleUrl>
+            <Point id="20">
+                <coordinates>6.115703958751415,46.239702334942685,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="27">
+            <name>fr4</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.95 [Nm] \ 1.759 [km]
+Start az= 82.7 [Deg]
+End az=  84.0 [Deg]
+Orient az=  45.41 [Deg]
+Hits= 6991</description>
+            <styleUrl>#28</styleUrl>
+            <Point id="26">
+                <coordinates>6.1228737187096005,46.2402019973988,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="33">
+            <name>fr5</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.7 [Nm] \ 1.296 [km]
+Start az= 93.0 [Deg]
+End az=  100.0 [Deg]
+Orient az=  44.9 [Deg]
+Hits= 9713</description>
+            <styleUrl>#34</styleUrl>
+            <Point id="32">
+                <coordinates>6.117030638277414,46.237584417415434,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="39">
+            <name>fr6</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.57 [Nm] \ 1.056 [km]
+Start az= 100.5 [Deg]
+End az=  108.0 [Deg]
+Orient az=  45.4 [Deg]
+Hits= 2247</description>
+            <styleUrl>#40</styleUrl>
+            <Point id="38">
+                <coordinates>6.113702490342948,46.23646620912951,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="45">
+            <name>fr7</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.74 [Nm] \ 1.370 [km]
+Start az= 102.0 [Deg]
+End az=  108.5 [Deg]
+Orient az=  314.71 [Deg]
+Hits= 133</description>
+            <styleUrl>#46</styleUrl>
+            <Point id="44">
+                <coordinates>6.117623381905392,46.23563145571252,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="51">
+            <name>fr8</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.57 [Nm] \ 1.056 [km]
+Start az= 108.0 [Deg]
+End az=  117.5 [Deg]
+Orient az=  45.45 [Deg]
+Hits= 2250</description>
+            <styleUrl>#52</styleUrl>
+            <Point id="50">
+                <coordinates>6.113260571036535,46.235262663854726,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="57">
+            <name>fr9</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 1.18 [Nm] \ 2.185 [km]
+Start az= 113.69 [Deg]
+End az=  114.79 [Deg]
+Orient az=  59.93 [Deg]
+Hits= 2325</description>
+            <styleUrl>#58</styleUrl>
+            <Point id="56">
+                <coordinates>6.126179695541022,46.23029143075255,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="63">
+            <name>fr10</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 1.18 [Nm] \ 2.185 [km]
+Start az= 113.88 [Deg]
+End az=  115.11 [Deg]
+Orient az=  354.05 [Deg]
+Hits= 4749</description>
+            <styleUrl>#64</styleUrl>
+            <Point id="62">
+                <coordinates>6.126141734503371,46.23023180897141,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="69">
+            <name>fr11</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.56 [Nm] \ 1.037 [km]
+Start az= 117.0 [Deg]
+End az=  122.0 [Deg]
+Orient az=  45.4 [Deg]
+Hits= 158</description>
+            <styleUrl>#70</styleUrl>
+            <Point id="68">
+                <coordinates>6.112223600152664,46.23396232585696,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="75">
+            <name>fr12</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.51 [Nm] \ 0.945 [km]
+Start az= 122.0 [Deg]
+End az=  146.0 [Deg]
+Orient az=  45.4 [Deg]
+Hits= 7795</description>
+            <styleUrl>#76</styleUrl>
+            <Point id="74">
+                <coordinates>6.110627999934168,46.233696232004,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="81">
+            <name>fr13</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.53 [Nm] \ 0.982 [km]
+Start az= 125.0 [Deg]
+End az=  133.0 [Deg]
+Orient az=  50.8 [Deg]
+Hits= 3</description>
+            <styleUrl>#82</styleUrl>
+            <Point id="80">
+                <coordinates>6.11066691061852,46.23313423327241,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="87">
+            <name>fr14</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.53 [Nm] \ 0.982 [km]
+Start az= 141.0 [Deg]
+End az=  155.0 [Deg]
+Orient az=  45.41 [Deg]
+Hits= 1897</description>
+            <styleUrl>#88</styleUrl>
+            <Point id="86">
+                <coordinates>6.1082499954072755,46.231338215919344,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="93">
+            <name>fr15</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.6 [Nm] \ 1.111 [km]
+Start az= 156.5 [Deg]
+End az=  158.5 [Deg]
+Orient az=  135.4 [Deg]
+Hits= 91</description>
+            <styleUrl>#94</styleUrl>
+            <Point id="92">
+                <coordinates>6.105984441284464,46.22903473574528,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="99">
+            <name>fr16</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.56 [Nm] \ 1.037 [km]
+Start az= 154.0 [Deg]
+End az=  159.5 [Deg]
+Orient az=  45.32 [Deg]
+Hits= 600</description>
+            <styleUrl>#100</styleUrl>
+            <Point id="98">
+                <coordinates>6.10613495191057,46.229816102824955,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="105">
+            <name>fr17</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.6 [Nm] \ 1.111 [km]
+Start az= 159.0 [Deg]
+End az=  161.5 [Deg]
+Orient az=  45.17 [Deg]
+Hits= 558</description>
+            <styleUrl>#106</styleUrl>
+            <Point id="104">
+                <coordinates>6.105402737231154,46.2288698961774,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="111">
+            <name>fr18</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.58 [Nm] \ 1.074 [km]
+Start az= 162.5 [Deg]
+End az=  164.5 [Deg]
+Orient az=  90.33 [Deg]
+Hits= 1303</description>
+            <styleUrl>#112</styleUrl>
+            <Point id="110">
+                <coordinates>6.104428087643868,46.22898682968149,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="117">
+            <name>fr19</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.6 [Nm] \ 1.111 [km]
+Start az= 163.0 [Deg]
+End az=  167.0 [Deg]
+Orient az=  45.37 [Deg]
+Hits= 54</description>
+            <styleUrl>#118</styleUrl>
+            <Point id="116">
+                <coordinates>6.104452087261993,46.228643218620306,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="123">
+            <name>fr20</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 1.05 [Nm] \ 1.945 [km]
+Start az= 163.6 [Deg]
+End az=  165.4 [Deg]
+Orient az=  103.2 [Deg]
+Hits= 376</description>
+            <styleUrl>#124</styleUrl>
+            <Point id="122">
+                <coordinates>6.107349841349695,46.221420740921495,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="129">
+            <name>fr21</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.56 [Nm] \ 1.037 [km]
+Start az= 167.1 [Deg]
+End az=  168.46 [Deg]
+Orient az=  106.3 [Deg]
+Hits= 11786</description>
+            <styleUrl>#130</styleUrl>
+            <Point id="128">
+                <coordinates>6.103242749791802,46.229108799947895,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="135">
+            <name>fr22</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 3.59 [Nm] \ 6.649 [km]
+Start az= 173.5 [Deg]
+End az=  176.0 [Deg]
+Orient az=  79.82 [Deg]
+Hits= 14</description>
+            <styleUrl>#136</styleUrl>
+            <Point id="134">
+                <coordinates>6.1099419811643125,46.178781228182345,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="141">
+            <name>fr23</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.6 [Nm] \ 1.111 [km]
+Start az= 171.0 [Deg]
+End az=  178.5 [Deg]
+Orient az=  45.2 [Deg]
+Hits= 73</description>
+            <styleUrl>#142</styleUrl>
+            <Point id="140">
+                <coordinates>6.102494133339772,46.22833044105564,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="147">
+            <name>fr24</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.75 [Nm] \ 1.389 [km]
+Start az= 175.0 [Deg]
+End az=  180.5 [Deg]
+Orient az=  37.68 [Deg]
+Hits= 1151</description>
+            <styleUrl>#148</styleUrl>
+            <Point id="146">
+                <coordinates>6.101807870512611,46.22575657380583,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="153">
+            <name>fr25</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.5 [Nm] \ 0.926 [km]
+Start az= 176.0 [Deg]
+End az=  180.5 [Deg]
+Orient az=  97.87 [Deg]
+Hits= 990</description>
+            <styleUrl>#154</styleUrl>
+            <Point id="152">
+                <coordinates>6.101079849819382,46.22989407486487,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="159">
+            <name>fr26</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.83 [Nm] \ 1.537 [km]
+Start az= 177.0 [Deg]
+End az=  180.0 [Deg]
+Orient az=  97.84 [Deg]
+Hits= 33316</description>
+            <styleUrl>#160</styleUrl>
+            <Point id="158">
+                <coordinates>6.101280347538146,46.22439559295724,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="165">
+            <name>fr27</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.7 [Nm] \ 1.296 [km]
+Start az= 181.5 [Deg]
+End az=  184.5 [Deg]
+Orient az=  128.0 [Deg]
+Hits= 87</description>
+            <styleUrl>#166</styleUrl>
+            <Point id="164">
+                <coordinates>6.099799924757324,46.22654678392874,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="171">
+            <name>fr28</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 1.02 [Nm] \ 1.889 [km]
+Start az= 182.0 [Deg]
+End az=  192.5 [Deg]
+Orient az=  111.37 [Deg]
+Hits= 550</description>
+            <styleUrl>#172</styleUrl>
+            <Point id="170">
+                <coordinates>6.099380686746,46.22122284032332,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="177">
+            <name>fr29</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.71 [Nm] \ 1.315 [km]
+Start az= 182.5 [Deg]
+End az=  186.0 [Deg]
+Orient az=  38.0 [Deg]
+Hits= 58</description>
+            <styleUrl>#178</styleUrl>
+            <Point id="176">
+                <coordinates>6.099496270093609,46.22638759575783,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="183">
+            <name>fr30</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.85 [Nm] \ 1.574 [km]
+Start az= 187.7 [Deg]
+End az=  189.1 [Deg]
+Orient az=  128.15 [Deg]
+Hits= 2986</description>
+            <styleUrl>#184</styleUrl>
+            <Point id="182">
+                <coordinates>6.097504284424487,46.22417274902698,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="189">
+            <name>fr31</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.92 [Nm] \ 1.704 [km]
+Start az= 191.5 [Deg]
+End az=  201.0 [Deg]
+Orient az=  111.25 [Deg]
+Hits= 15147</description>
+            <styleUrl>#190</styleUrl>
+            <Point id="188">
+                <coordinates>6.095834758357847,46.22318735865875,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="195">
+            <name>fr32</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 1.03 [Nm] \ 1.908 [km]
+Start az= 200.5 [Deg]
+End az=  202.5 [Deg]
+Orient az=  106.73 [Deg]
+Hits= 12</description>
+            <styleUrl>#196</styleUrl>
+            <Point id="194">
+                <coordinates>6.091578979867643,46.2221354809301,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="201">
+            <name>fr33</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.22 [Nm] \ 0.407 [km]
+Start az= 204.0 [Deg]
+End az=  206.5 [Deg]
+Orient az=  135.11 [Deg]
+Hits= 72</description>
+            <styleUrl>#202</styleUrl>
+            <Point id="200">
+                <coordinates>6.098099066984006,46.23485602506489,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="207">
+            <name>fr34</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 1.37 [Nm] \ 2.537 [km]
+Start az= 216.0 [Deg]
+End az=  218.5 [Deg]
+Orient az=  133.69 [Deg]
+Hits= 848</description>
+            <styleUrl>#208</styleUrl>
+            <Point id="206">
+                <coordinates>6.080908862626216,46.21974703767347,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="213">
+            <name>fr35</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.74 [Nm] \ 1.370 [km]
+Start az= 246.0 [Deg]
+End az=  248.5 [Deg]
+Orient az=  226.85 [Deg]
+Hits= 16</description>
+            <styleUrl>#214</styleUrl>
+            <Point id="212">
+                <coordinates>6.084018373726064,46.2331950139557,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="219">
+            <name>fr36</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.74 [Nm] \ 1.370 [km]
+Start az= 251.0 [Deg]
+End az=  253.0 [Deg]
+Orient az=  225.26 [Deg]
+Hits= 329</description>
+            <styleUrl>#220</styleUrl>
+            <Point id="218">
+                <coordinates>6.083451016240058,46.23419570587683,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="225">
+            <name>fr37</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.73 [Nm] \ 1.352 [km]
+Start az= 258.0 [Deg]
+End az=  260.5 [Deg]
+Orient az=  135.5 [Deg]
+Hits= 707</description>
+            <styleUrl>#226</styleUrl>
+            <Point id="224">
+                <coordinates>6.083107062631811,46.235680739745085,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="231">
+            <name>fr38</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.74 [Nm] \ 1.370 [km]
+Start az= 266.5 [Deg]
+End az=  272.0 [Deg]
+Orient az=  135.18 [Deg]
+Hits= 78</description>
+            <styleUrl>#232</styleUrl>
+            <Point id="230">
+                <coordinates>6.082518201294197,46.237456590870444,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="237">
+            <name>fr39</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.06 [Nm] \ 0.111 [km]
+Start az= 309.0 [Deg]
+End az=  312.0 [Deg]
+Orient az=  224.9 [Deg]
+Hits= 58</description>
+            <styleUrl>#238</styleUrl>
+            <Point id="236">
+                <coordinates>6.099131160220117,46.238832448695774,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="243">
+            <name>fr40</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.2 [Nm] \ 0.370 [km]
+Start az= 317.5 [Deg]
+End az=  337.0 [Deg]
+Orient az=  229.2 [Deg]
+Hits= 649</description>
+            <styleUrl>#244</styleUrl>
+            <Point id="242">
+                <coordinates>6.097008339949498,46.24066058873691,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="249">
+            <name>fr41</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.21 [Nm] \ 0.389 [km]
+Start az= 318.0 [Deg]
+End az=  321.5 [Deg]
+Orient az=  236.06 [Deg]
+Hits= 12</description>
+            <styleUrl>#250</styleUrl>
+            <Point id="248">
+                <coordinates>6.096878832285209,46.2408039779266,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="255">
+            <name>fr42</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.19 [Nm] \ 0.352 [km]
+Start az= 322.1 [Deg]
+End az=  325.0 [Deg]
+Orient az=  225.85 [Deg]
+Hits= 511</description>
+            <styleUrl>#256</styleUrl>
+            <Point id="254">
+                <coordinates>6.097450199452011,46.240701567213236,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="261">
+            <name>fr43</name>
+            <description>Type= fixed 
+Radar name= GV2S
+Radar channel= CHA
+Range= 0.22 [Nm] \ 0.407 [km]
+Start az= 332.5 [Deg]
+End az=  338.5 [Deg]
+Orient az=  236.04 [Deg]
+Hits= 2145</description>
+            <styleUrl>#262</styleUrl>
+            <Point id="260">
+                <coordinates>6.097814042483334,46.241454622682355,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
