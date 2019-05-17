@@ -55,6 +55,10 @@ GV1 = "GV1"
 GV2 = "GV2"
 RADARNAME = [GV1, GV2]
 
+# Angle radar correction
+ROTATION = 90
+DELTA = 2.13
+
 
 def main():
 
@@ -161,10 +165,8 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel):
             # Init kml
             kml = simplekml.Kml()
 
-            # Angle correction
-            rotation = 90
-            delta = 2.13
-            correction = rotation - delta
+            # Angle radar correction
+            correction = ROTATION - DELTA
 
             # Convert radar deg coordinat (latitude, longitude) into UTM (Universal Transverse Mercator) coordinate [m]
             utm = Proj(proj='utm', zone='32U', ellps='WGS84')
