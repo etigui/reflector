@@ -2,11 +2,12 @@ __author__ = "Etienne Guignard"
 __copyright__ = "Copyright 2019, Etienne Guignard"
 __credits__ = ["flaticon.com"]
 __license__ = "GPL"
-__version__ = "1.1.2"
+__version__ = "1.6.0"
 __maintainer__ = "Etienne Guignard"
 __email__ = "guignard.etienne@gmail.com"
 __status__ = "Production"
 
+# External import
 import sys
 import os
 import math
@@ -22,6 +23,9 @@ import itertools
 import argparse
 import logging
 
+# Internal import
+from tml import Tml, TmlError
+
 # Arg count
 ARGS = 3
 
@@ -30,9 +34,6 @@ DRAWLINE = False
 
 # Remove last kml file generated
 REMOVEFILES = False
-
-# No data in tml file
-NODATA = "No Reflectors to output"
 
 # Google earth file extention
 KML = ".kml"
@@ -47,9 +48,12 @@ GV2LATITUDE =  6.099153
 GV2LONGITUDE = 46.238859
 
 # Radar name
-GV1 = "GT1S"
-GV2 = "xxxx"
-RADARNAME = [GV1, GV2]
+GV1 = ["GV1", "GV1S", "GT1S"]
+GV2 = ["GV2", "GV2S", "GT2S"]
+
+# Angle radar correction
+ROTATION = 90
+DELTA = 2.13
 
 
 def main():
@@ -101,108 +105,62 @@ def get_reflector_datas(inputFilePath):
     logger = logging.getLogger(f'{Path(__file__).stem}.{str(get_reflector_datas.__qualname__)}')
     try:
 
-        # Read reflector file
-        with open(inputFilePath) as f:
+        # Get reflector data
+        tml = Tml(inputFilePath)
+        radarName = tml.get_radar_name()
+        radarChannel = tml.get_radar_channel()
+        refDataTable = tml.get_ref_data_table()
 
-            # Split elements with " " and add each value in the list
-            content = [" ".join(l.split()) for l in f.readlines()]
+        # Get all reflector data table
+        for rdt in refDataTable:
 
-        # Check if reflector file
-        if(content.pop(0).startswith("_DAR")):
+            # Calc reflector and save it to kml file
+            calc_reflector_data(rdt, inputFilePath, radarChannel, radarName)
+    except TmlError as msg:
+        logger.error(f'Unexpected exception occurred: {msg}')
+    except Exception as ex:
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}')
 
-            # Remove empty list item
-            content = list(filter(None, content))
 
-            # Clean up unwanted item
-            content = [l for l in content if l not in ("START END ORIENT REV", "INDEX RANGE AZIMUTH AZIMUTH AZIMUTH NUM HITS", "Nm Deg Deg Deg")]
+# Calc all reflector and add pos (latitude, long) into kml file
+def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
 
-            # Get radar info
-            radarInfo = [r.split(" ")[2:4] for r in content if r.startswith('FIXED REFLECTORS')].pop()
+    # Define logger
+    logger = logging.getLogger(f'{Path(__file__).stem}.{str(calc_reflector_data.__qualname__)}')
+    try:
+        
+        # Get paddle ref image
+        paddleImage = get_paddle_image()
 
-            # Get radar name and channel
-            radarChanel = str(radarInfo.pop())
-            radarName = str(radarInfo.pop())
-            
-            # Check radar name
-            if radarName in RADARNAME:
+        # Check if data table is empty
+        if refDataTable.refIndex:
 
-                # Get latidude and logitude radar pos
-                latitude = GV2LATITUDE
-                longitude = GV2LONGITUDE
-                if radarName.startswith(GV1):
-                    latitude = GV1LATITUDE
-                    longitude = GV1LONGITUDE
-
-                # Search for start
-                cdrIndex = int([i for i, j in zip(itertools.count(), content) if j.startswith('CURRENT DYNAMIC REFLECTORS')].pop())
-                ncdrIndex = int([i for i, j in zip(itertools.count(), content) if j.startswith('NON-CURRENT DYNAMIC REFLECTORS')].pop())
+            # Get radar pos (lat, long) from randar name
+            latitude, longitude = get_radar_lat_long(radarName)
+            if latitude and longitude:
 
                 # Build output kml file
                 p = Path(inputFilePath)
                 date = datetime.datetime.now().strftime('%d%m%Y%H%M%S')
                 fileName = f'{radarName.lower()}-{p.stem.lower()}'
-
-                # Calc and slice reflector table with output kml file
-                shift = 1
-                calc_reflect_data(check_no_data(content[shift:cdrIndex]), os.path.join(p.parent, f'{fileName}-fixed-{date}{KML}'), "fr", "Fixed", radarName, radarChanel, latitude, longitude)
-                calc_reflect_data(check_no_data(content[cdrIndex + shift:ncdrIndex]), os.path.join(p.parent, f'{fileName}-current-dynamic-{date}{KML}'), "cdf", "Current dynamic", radarName,radarChanel, latitude, longitude)
-                calc_reflect_data(check_no_data(content[ncdrIndex + shift:len(content)]), os.path.join(p.parent, f'{fileName}-non-current-dynamic-{date}{KML}'), "ncdf", "Non-current dynamic", radarName, radarChanel, latitude, longitude)
-            else:
-                logger.error('Radar name not valid')
-        else:
-            logger.error('Reflector file not valid')
-    except IndexError:
-        logger.error("Reflector file struct not valid (list error)")
-    except ValueError:
-        logger.error('Cast value error')
-    except FileNotFoundError:
-        logger.error('Reflector file not found')
-    except Exception as ex:
-        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}') 
-
-
-# Calc all reflector and add pos (latitude, long) into kml file
-def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFullName, radarName, radarChanel, latitude, longitude):
-
-    # Define logger
-    logger = logging.getLogger(f'{Path(__file__).stem}.{str(calc_reflect_data.__qualname__)}')
-    try:
-
-        # Check if data are ot empty
-        if data:
-
-                # Split elements with " "
-                data = [l.strip().split(" ") for l in data]
-
-                # Map each element and cast into adequate type
-                refIndex = [int(e) for e in list(map(itemgetter(0), data))]
-                refRange = [float(e) for e in list(map(itemgetter(1), data))]
-                refStartAz = [float(e) for e in list(map(itemgetter(2), data))]
-                refEndAz = [float(e) for e in list(map(itemgetter(3), data))]
-                refOrAz = [float(e) for e in list(map(itemgetter(4), data))]
-                refHits = [int(e) for e in list(map(itemgetter(6), data))]
+                outputFilePath = os.path.join(p.parent, f'{fileName}-{refDataTable.refTypeMinus}{date}{KML}')
 
                 # Init kml
                 kml = simplekml.Kml()
 
-                # Angle correction
-                rotation = 90
-                delta = 2.13
-                correction = rotation - delta
+                # Angle radar correction
+                correction = ROTATION - DELTA
 
                 # Convert radar deg coordinat (latitude, longitude) into UTM (Universal Transverse Mercator) coordinate [m]
                 utm = Proj(proj='utm', zone='32U', ellps='WGS84')
                 xUtm, yUtm = utm(latitude, longitude)
 
-                # Check is list has the same length
-                if refIndex and refRange and refStartAz and refEndAz and refOrAz and refHits:
-                    
-                    # Get paddle ref image
-                    paddleImage = get_paddle_image()
+                # Check is not empty
+                if refDataTable.refIndex and refDataTable.refRange and refDataTable.refStartAz and refDataTable.refEndAz and refDataTable.refOrAz and refDataTable.refHits:
 
                     # Iter all reflector
-                    for (r, sa, ea, oa, h, i) in zip(refRange, refStartAz, refEndAz, refOrAz, refHits, refIndex):
-                        
+                    for (r, sa, ea, oa, h, i) in zip(refDataTable.refRange, refDataTable.refStartAz, refDataTable.refEndAz, refDataTable.refOrAz, refDataTable.refHits, refDataTable.refIndex):
+
                         # Convert reflector "range" from Nm to m
                         refRangeConv = nm_to_m(float(r))
 
@@ -217,18 +175,20 @@ def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFu
                         refLongLat = utm(x, y, inverse=True)
 
                         # Create new reflector point
-                        pnt = kml.newpoint(name=f'{reflectionTypeName}{i}', coords=[refLongLat], description=f'Type= {reflectionTypeFullName}\nRadar name= {radarName}\nRadar channel= {radarChanel}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
+                        pnt = kml.newpoint(name=f'{refDataTable.refTypeAcronym}{i}', coords=[refLongLat], description=f'Type= {refDataTable.refType}\nRadar name= {radarName}\nRadar channel= {radarChannel}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
                         pnt.style.labelstyle.color = simplekml.Color.white
                         pnt.style.labelstyle.scale = 1.2 if PADDLENAME else 0
                         pnt.style.iconstyle.icon.href = paddleImage
 
                         # draw line from radar point to reflector point
                         if DRAWLINE:
-                            line = kml.newlinestring(name=f'l{reflectionTypeName}{i}', description=f'Line from radar to refelctor {i}', coords=[(latitude, longitude), refLongLat])
+                            line = kml.newlinestring(name=f'l{refDataTable.refTypeAcronym}{i}', description=f'Line from radar to refelctor {i}', coords=[(latitude, longitude), refLongLat])
                             line.style.linestyle.color = simplekml.Color.red
                             line.style.linestyle.width = 1
                 kml.save(outputFilePath)
                 logger.info("KML file generated: " + outputFilePath)
+            else:
+                logger.error("Radar name not valid")
     except ValueError:
         logger.error("Cast value error")
     except Exception as ex:
@@ -238,14 +198,6 @@ def calc_reflect_data(data, outputFilePath, reflectionTypeName, reflectionTypeFu
 # Convert Nm to m
 def nm_to_m(nm):
     return nm * 1.85200 * 1000
-
-
-# Check if not data in the tml table file
-def check_no_data(data):
-    if data:
-        if data[0].startswith(NODATA):
-            return []
-    return data
 
 
 # Check file
@@ -263,9 +215,10 @@ def check_file(inputFilePath):
                 return True
         return False
     except FileNotFoundError:
-        logger.error("file not found")
+        return False
     except Exception as ex:
-        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}') 
+        logger.error(f'Unexpected exception occurred: {type(ex)} {ex}')
+        return False
 
 
 # Get paddle image ref
@@ -297,6 +250,16 @@ def remove_last_kml_file(inputFilePath):
         logger.error("File to remove not found")
     except Exception as ex:
         logger.error(f'Unexpected exception occurred: {type(ex)} {ex}')
+
+
+# Get radar pos (lat, long) from randar name
+def get_radar_lat_long(radarName):
+    if radarName in GV1:
+        return GV1LATITUDE, GV1LONGITUDE
+    elif radarName in GV2:
+        return GV2LATITUDE, GV2LONGITUDE
+    else:
+        return None, None
 
 
 # Entree main function
