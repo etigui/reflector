@@ -33,7 +33,7 @@ ARGS = 3
 DRAWLINE = False
 
 # Remove last kml file generated
-REMOVEFILES = True
+REMOVEFILES = False
 
 # Google earth file extention
 KML = ".kml"
