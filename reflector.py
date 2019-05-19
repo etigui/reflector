@@ -33,7 +33,7 @@ ARGS = 3
 DRAWLINE = False
 
 # Remove last kml file generated
-REMOVEFILES = False
+REMOVEFILES = True
 
 # Google earth file extention
 KML = ".kml"
@@ -53,7 +53,6 @@ GV2 = ["GV2", "GV2S", "GT2S"]
 
 # Angle radar correction
 ROTATION = 90
-DELTA = 2.13
 
 
 def main():
@@ -152,11 +151,8 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
             # Init kml
             kml = simplekml.Kml()
 
-            # Angle radar correction
-            correction = ROTATION - DELTA
-
             # Convert radar deg coordinat (latitude, longitude) into UTM (Universal Transverse Mercator) coordinate [m]
-            utm = Proj(proj='utm', zone='32U', ellps='WGS84')
+            utm = Proj(f'+proj=somerc +lat_0={latitude} +lon_0={longitude} +ellps=bessel  +units=m +no_defs')
             xUtm, yUtm = utm(longitude, latitude)
 
             # Check is not empty
@@ -168,8 +164,8 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
                     # Convert reflector "range" from Nm to m
                     refRangeConv = nm_to_m(float(r))
 
-                    # Convert reflector "deg" to radian and add angle correction
-                    refDegConv = float(math.radians((correction - sa)))
+                    # Convert reflector "deg" to radian and add angle correction (N to E = 90°)
+                    refDegConv = float(math.radians(ROTATION - sa))
 
                     # Converting degrees to (x,y) coordinates
                     x = (refRangeConv * float(math.cos(refDegConv))) + float(xUtm)
