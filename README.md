@@ -45,3 +45,4 @@ The exe file "reflector.exe" is located [here](https://github.com/etigui/reflect
 - [Coordinate Conversions](https://docs.obspy.org/tutorial/code_snippets/coordinate_conversions.html)
 - [Converting projected coordinates to lat/lon using Python](https://gis.stackexchange.com/questions/78838/converting-projected-coordinates-to-lat-lon-using-python)
 - [PROJ.4 - General Parameters](http://proj.maptools.org/gen_parms.html)
+- [How to Find the Distance Between Two Points](https://www.wikihow.com/Find-the-Distance-Between-Two-Points)
