@@ -2,7 +2,7 @@ __author__ = "Etienne Guignard"
 __copyright__ = "Copyright 2019, Etienne Guignard"
 __credits__ = ["flaticon.com"]
 __license__ = "GPL"
-__version__ = "1.7.0"
+__version__ = "1.8.0"
 __maintainer__ = "Etienne Guignard"
 __email__ = "guignard.etienne@gmail.com"
 __status__ = "Production"
@@ -27,7 +27,7 @@ import logging
 from tml import Tml, TmlError
 
 # Arg count
-ARGS = 3
+ARGV = 3
 
 # Draw line between radar and reflector
 DRAWLINE = False
@@ -53,6 +53,8 @@ GV2 = ["GV2", "GV2S", "GT2S"]
 
 # Angle radar correction
 ROTATION = 90
+ROTATIONFULL = 360
+ROTATIONHALF = 180
 
 
 def main():
@@ -76,7 +78,7 @@ def main():
     logger = logging.getLogger('reflector.main')
 
     # Check arg count
-    if len(sys.argv) is ARGS:
+    if len(sys.argv) is ARGV:
 
         # Check input file
         if check_file(inputFilePath):
@@ -87,8 +89,8 @@ def main():
 
             # Global paddle image ref list
             global images
-            images = ["ltblu", "purple", "pink", "ylw", "grn", "blu", "red"]
-
+            images = ["ylw", "grn", "blu", "red"]
+            
             # Generate kml file
             get_reflector_datas(inputFilePath)
         else:
@@ -134,7 +136,7 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
     try:
         
         # Get paddle ref image
-        paddleImage = get_paddle_image()
+        paddleImage, lineColor = get_paddle_image()
 
         # Check if data table is empty
         if refDataTable.refIndex:
@@ -164,25 +166,56 @@ def calc_reflector_data(refDataTable, inputFilePath, radarChannel, radarName):
                     # Convert reflector "range" from Nm to m
                     refRangeConv = nm_to_m(float(r))
 
-                    # Convert reflector "deg" to radian and add angle correction (N to E = 90°)
-                    refDegConv = float(math.radians(ROTATION - sa))
+                    # Convert reflector start azimuth from deg to radian and add angle correction (N to E = 90°)
+                    refStartAzConv = float(math.radians(ROTATION - sa))
 
-                    # Converting degrees to (x,y) coordinates
-                    x = (refRangeConv * float(math.cos(refDegConv))) + float(xUtm)
-                    y = (refRangeConv * float(math.sin(refDegConv))) + float(yUtm)
+                    # Convert reflector end azimuth from deg to radian and add angle correction (N to E = 90°)
+                    refEndAzConv = float(math.radians(ROTATION - ea))
+                  
+                    # Convert reflector orientation azimuth from deg to radian and add angle correction (N to E = 90°)
+                    ang = (ROTATION - oa) + ROTATIONHALF
+                    if ang > ROTATIONFULL:
+                        ang = ang - ROTATIONFULL
+                    refOrAzConv = float(math.radians(ang))
 
-                    # Convert UTM (Universal Transverse Mercator) coordinate into (latitude, longitude)
-                    refLongLat = utm(x, y, inverse=True)
+                    # Converting start azimuth to (x,y) coordinates and add radar position
+                    xStartAz = (refRangeConv * float(math.cos(refStartAzConv))) + float(xUtm)
+                    yStartAz = (refRangeConv * float(math.sin(refStartAzConv))) + float(yUtm)
+
+                    # Converting end azimuth to (x,y) coordinates and add radar position
+                    xEnd = (refRangeConv * float(math.cos(refEndAzConv))) + float(xUtm)
+                    yEnd = (refRangeConv * float(math.sin(refEndAzConv))) + float(yUtm)
+
+                    # Calc dist between 2 points (start azimuth and end azimuth)
+                    distSEAz = math.sqrt(math.pow(xEnd - xStartAz, 2)+math.pow(yEnd - yStartAz, 2))
+
+                    # Converting orientation azimuth to (x,y) coordinates and add start position
+                    xOrAz = (distSEAz * float(math.cos(refOrAzConv))) + xStartAz
+                    yOrAz = (distSEAz * float(math.sin(refOrAzConv))) + yStartAz
+
+                    # Convert UTM (Universal Transverse Mercator) coordinate (start azimuth) into (latitude, longitude)
+                    refStartAzLongLat = utm(xStartAz, yStartAz, inverse=True)
+
+                    # Convert UTM (Universal Transverse Mercator) coordinate (orientation azimuth) into (latitude, longitude)
+                    refOrAzLongLat = utm(xOrAz, yOrAz, inverse=True)
+
+                    # Ref name (first letter uppercase)
+                    refType = refDataTable.refTypeAcronym[0].upper()
 
                     # Create new reflector point
-                    pnt = kml.newpoint(name=f'{refDataTable.refTypeAcronym}{i}', coords=[refLongLat], description=f'Type= {refDataTable.refType}\nRadar name= {radarName}\nRadar channel= {radarChannel}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
-                    pnt.style.labelstyle.color = simplekml.Color.white
-                    pnt.style.labelstyle.scale = 1.2 if PADDLENAME else 0
-                    pnt.style.iconstyle.icon.href = paddleImage
+                    startAzPoint = kml.newpoint(name=f'{refType}{i}-{h}', coords=[refStartAzLongLat], description=f'Type= {refDataTable.refType}\nRadar name= {radarName}\nRadar channel= {radarChannel}\nRange= {r} [Nm] \\ {(refRangeConv / 1000):.3f} [km]\nStart az= {sa} [Deg]\nEnd az=  {ea} [Deg]\nOrient az=  {oa} [Deg]\nHits= {h}')
+                    startAzPoint.style.labelstyle.color = simplekml.Color.white
+                    startAzPoint.style.labelstyle.scale = 1.2 if PADDLENAME else 0
+                    startAzPoint.style.iconstyle.icon.href = paddleImage
 
-                    # draw line from radar point to reflector point
+                    # Draw line from start azimuth to oriention asimuth
+                    orAzLine = kml.newlinestring(name=f'l{refType}{i}', description=f'Orientation azimuth {i}', coords=[refStartAzLongLat, refOrAzLongLat])
+                    orAzLine.style.linestyle.color = lineColor
+                    orAzLine.style.linestyle.width = 3
+
+                    # Draw line from radar point to reflector point
                     if DRAWLINE:
-                        line = kml.newlinestring(name=f'l{refDataTable.refTypeAcronym}{i}', description=f'Line from radar to refelctor {i}', coords=[(longitude, latitude), refLongLat])
+                        line = kml.newlinestring(name=f'l{refType}{i}', description=f'Line from radar to refelctor {i}', coords=[(longitude, latitude), refStartAzLongLat])
                         line.style.linestyle.color = simplekml.Color.red
                         line.style.linestyle.width = 1
             kml.save(outputFilePath)
@@ -224,14 +257,18 @@ def get_paddle_image():
     
     # Define logger
     logger = logging.getLogger(f'{Path(__file__).stem}.{str(get_paddle_image.__qualname__)}')
+
+    # Color simplekml lib
+    color = {"red" : simplekml.Color.red, "blu" : simplekml.Color.blue, "grn" : simplekml.Color.green , "ylw" : simplekml.Color.yellow}
     try:
-        return f'https://maps.google.com/mapfiles/kml/paddle/{images.pop()}-blank.png'
+        colorName = images.pop()
+        return f'https://maps.google.com/mapfiles/kml/paddle/{colorName}-circle.png', color.get(colorName)
     except IndexError:
         logger.error("paddle image ref error")
-        return f'https://maps.google.com/mapfiles/kml/paddle/wht-blank.png'
+        return f'https://maps.google.com/mapfiles/kml/paddle/wht-blank.png', simplekml.Color.white
     except Exception as ex:
         logger.error(f'Unexpected exception occurred: {type(ex)} {ex}')
-        return f'https://maps.google.com/mapfiles/kml/paddle/wht-blank.png'
+        return f'https://maps.google.com/mapfiles/kml/paddle/wht-blank.png', simplekml.Color.white
 
 
 # Remove last kml file generated
