@@ -183,12 +183,8 @@ class Reflector():
                         xStartAz = (refRangeConv * float(math.cos(refStartAzConv))) + float(xUtm)
                         yStartAz = (refRangeConv * float(math.sin(refStartAzConv))) + float(yUtm)
 
-                        # Converting end azimuth to (x,y) coordinates and add radar position
-                        xEndAz = (refRangeConv * float(math.cos(refEndAzConv))) + float(xUtm)
-                        yEndAz = (refRangeConv * float(math.sin(refEndAzConv))) + float(yUtm)
-
-                        # Calc dist between 2 points (start azimuth and end azimuth)
-                        distSEAz = math.sqrt(math.pow(xEndAz - xStartAz, 2)+math.pow(yEndAz - yStartAz, 2))
+                        # Calc dist of the orientation vector
+                        distSEAz = (refRangeConv * (math.sin(refEndAzConv - refStartAzConv))) / (math.sin(refOrAzConv - refEndAzConv))
 
                         # Converting orientation azimuth to (x,y) coordinates and add start position
                         xOrAz = (distSEAz * float(math.cos(refOrAzConv))) + xStartAz

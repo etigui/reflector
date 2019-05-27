@@ -981,7 +981,7 @@ Orient az=  313.3 [Deg]
 Hits= 1310</description>
             <styleUrl>#4</styleUrl>
             <Point id="2">
-                <coordinates>6.1073782347938685,46.241293317112984,0.0</coordinates>
+                <coordinates>6.1073782347938685,46.24129331711299,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="9">
@@ -989,7 +989,7 @@ Hits= 1310</description>
             <description>Orientation azimuth 0</description>
             <styleUrl>#10</styleUrl>
             <LineString id="8">
-                <coordinates>6.1073782347938685,46.241293317112984,0.0 6.109186421547812,46.24011078665853,0.0</coordinates>
+                <coordinates>6.1073782347938685,46.24129331711299,0.0 6.109480133938322,46.23991869508218,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="13">
@@ -1004,7 +1004,7 @@ Orient az=  45.34 [Deg]
 Hits= 296</description>
             <styleUrl>#14</styleUrl>
             <Point id="12">
-                <coordinates>6.121822645567826,46.24335469855146,0.0</coordinates>
+                <coordinates>6.121822645567826,46.243354698551485,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="19">
@@ -1012,7 +1012,7 @@ Hits= 296</description>
             <description>Orientation azimuth 1</description>
             <styleUrl>#20</styleUrl>
             <LineString id="18">
-                <coordinates>6.121822645567826,46.24335469855146,0.0 6.121114412781228,46.24286936791215,0.0</coordinates>
+                <coordinates>6.121822645567826,46.243354698551485,0.0 6.120322318853624,46.24232655436872,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="23">
@@ -1027,7 +1027,7 @@ Orient az=  45.5 [Deg]
 Hits= 8696</description>
             <styleUrl>#24</styleUrl>
             <Point id="22">
-                <coordinates>6.116751797594178,46.240427441585645,0.0</coordinates>
+                <coordinates>6.116751797594178,46.24042744158566,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="29">
@@ -1035,7 +1035,7 @@ Hits= 8696</description>
             <description>Orientation azimuth 2</description>
             <styleUrl>#30</styleUrl>
             <LineString id="28">
-                <coordinates>6.116751797594178,46.240427441585645,0.0 6.116123940045799,46.23999950921506,0.0</coordinates>
+                <coordinates>6.116751797594178,46.24042744158566,0.0 6.1156966277345255,46.23970825778476,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="33">
@@ -1050,7 +1050,7 @@ Orient az=  45.4 [Deg]
 Hits= 20558</description>
             <styleUrl>#34</styleUrl>
             <Point id="32">
-                <coordinates>6.115707779414077,46.23970934372058,0.0</coordinates>
+                <coordinates>6.115707779414077,46.23970934372057,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="39">
@@ -1058,7 +1058,7 @@ Hits= 20558</description>
             <description>Orientation azimuth 3</description>
             <styleUrl>#40</styleUrl>
             <LineString id="38">
-                <coordinates>6.115707779414077,46.23970934372058,0.0 6.113673449273103,46.23831785299853,0.0</coordinates>
+                <coordinates>6.115707779414077,46.23970934372057,0.0 6.112942374713659,46.23781776869128,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="43">
@@ -1073,7 +1073,7 @@ Orient az=  45.41 [Deg]
 Hits= 6991</description>
             <styleUrl>#44</styleUrl>
             <Point id="42">
-                <coordinates>6.122879450388194,46.24021218985988,0.0</coordinates>
+                <coordinates>6.122879450388194,46.240212189859925,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="49">
@@ -1081,7 +1081,7 @@ Hits= 6991</description>
             <description>Orientation azimuth 4</description>
             <styleUrl>#50</styleUrl>
             <LineString id="48">
-                <coordinates>6.122879450388194,46.24021218985988,0.0 6.122510718531701,46.23996011952638,0.0</coordinates>
+                <coordinates>6.122879450388194,46.240212189859925,0.0 6.122288330326985,46.23980809009517,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="53">
@@ -1096,7 +1096,7 @@ Orient az=  44.9 [Deg]
 Hits= 9713</description>
             <styleUrl>#54</styleUrl>
             <Point id="52">
-                <coordinates>6.1170367533796,46.237591310922305,0.0</coordinates>
+                <coordinates>6.1170367533796,46.23759131092231,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="59">
@@ -1104,7 +1104,7 @@ Hits= 9713</description>
             <description>Orientation azimuth 5</description>
             <styleUrl>#60</styleUrl>
             <LineString id="58">
-                <coordinates>6.1170367533796,46.237591310922305,0.0 6.11558772294532,46.23658272230285,0.0</coordinates>
+                <coordinates>6.1170367533796,46.23759131092231,0.0 6.115273272745849,46.2363638438687,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="63">
@@ -1119,7 +1119,7 @@ Orient az=  45.4 [Deg]
 Hits= 2247</description>
             <styleUrl>#64</styleUrl>
             <Point id="62">
-                <coordinates>6.113708492141913,46.236471337234626,0.0</coordinates>
+                <coordinates>6.113708492141913,46.236471337234676,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="69">
@@ -1127,7 +1127,7 @@ Hits= 2247</description>
             <description>Orientation azimuth 6</description>
             <styleUrl>#70</styleUrl>
             <LineString id="68">
-                <coordinates>6.113708492141913,46.236471337234626,0.0 6.11243346201687,46.235599127789214,0.0</coordinates>
+                <coordinates>6.113708492141913,46.236471337234676,0.0 6.112275426540216,46.23549101758693,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="73">
@@ -1142,7 +1142,7 @@ Orient az=  314.71 [Deg]
 Hits= 133</description>
             <styleUrl>#74</styleUrl>
             <Point id="72">
-                <coordinates>6.117631408540829,46.23563797776053,0.0</coordinates>
+                <coordinates>6.117631408540829,46.235637977760575,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="79">
@@ -1150,7 +1150,7 @@ Hits= 133</description>
             <description>Orientation azimuth 7</description>
             <styleUrl>#80</styleUrl>
             <LineString id="78">
-                <coordinates>6.117631408540829,46.23563797776053,0.0 6.119062964988588,46.2346541430765,0.0</coordinates>
+                <coordinates>6.117631408540829,46.235637977760575,0.0 6.120867413425799,46.23341396314153,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="83">
@@ -1165,7 +1165,7 @@ Orient az=  45.45 [Deg]
 Hits= 2250</description>
             <styleUrl>#84</styleUrl>
             <Point id="82">
-                <coordinates>6.1132674856799145,46.23526721926175,0.0</coordinates>
+                <coordinates>6.1132674856799145,46.235267219261765,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="89">
@@ -1173,7 +1173,7 @@ Hits= 2250</description>
             <description>Orientation azimuth 8</description>
             <styleUrl>#90</styleUrl>
             <LineString id="88">
-                <coordinates>6.1132674856799145,46.23526721926175,0.0 6.11165180739049,46.23416386656765,0.0</coordinates>
+                <coordinates>6.1132674856799145,46.235267219261765,0.0 6.11157497647435,46.234111396774594,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="93">
@@ -1188,7 +1188,7 @@ Orient az=  59.93 [Deg]
 Hits= 2325</description>
             <styleUrl>#94</styleUrl>
             <Point id="92">
-                <coordinates>6.126195228104952,46.23029989618173,0.0</coordinates>
+                <coordinates>6.126195228104952,46.230299896181734,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="99">
@@ -1196,7 +1196,7 @@ Hits= 2325</description>
             <description>Orientation azimuth 9</description>
             <styleUrl>#100</styleUrl>
             <LineString id="98">
-                <coordinates>6.126195228104952,46.23029989618173,0.0 6.125724406151273,46.23011085902721,0.0</coordinates>
+                <coordinates>6.126195228104952,46.230299896181734,0.0 6.1256195008023555,46.23006873861092,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="103">
@@ -1211,7 +1211,7 @@ Orient az=  354.05 [Deg]
 Hits= 4749</description>
             <styleUrl>#104</styleUrl>
             <Point id="102">
-                <coordinates>6.1261573074722815,46.2302402394424,0.0</coordinates>
+                <coordinates>6.1261573074722815,46.23024023944244,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="109">
@@ -1219,7 +1219,7 @@ Hits= 4749</description>
             <description>Orientation azimuth 10</description>
             <styleUrl>#110</styleUrl>
             <LineString id="108">
-                <coordinates>6.1261573074722815,46.2302402394424,0.0 6.1262201580982785,46.22982040100815,0.0</coordinates>
+                <coordinates>6.1261573074722815,46.23024023944244,0.0 6.126230672997412,46.22975016147733,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="113">
@@ -1234,7 +1234,7 @@ Orient az=  45.4 [Deg]
 Hits= 158</description>
             <styleUrl>#114</styleUrl>
             <Point id="112">
-                <coordinates>6.112231317395881,46.23396602453034,0.0</coordinates>
+                <coordinates>6.112231317395881,46.233966024530325,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="119">
@@ -1242,7 +1242,7 @@ Hits= 158</description>
             <description>Orientation azimuth 11</description>
             <styleUrl>#120</styleUrl>
             <LineString id="118">
-                <coordinates>6.112231317395881,46.23396602453034,0.0 6.111395927366869,46.23339451674504,0.0</coordinates>
+                <coordinates>6.112231317395881,46.233966024530325,0.0 6.111373365726322,46.23337908160502,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="123">
@@ -1265,7 +1265,7 @@ Hits= 7795</description>
             <description>Orientation azimuth 12</description>
             <styleUrl>#130</styleUrl>
             <LineString id="128">
-                <coordinates>6.110635423621827,46.233699167996,0.0 6.107009279974705,46.2312182046354,0.0</coordinates>
+                <coordinates>6.110635423621827,46.233699167996,0.0 6.107026941649983,46.23123028936199,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="133">
@@ -1280,7 +1280,7 @@ Orient az=  50.8 [Deg]
 Hits= 3</description>
             <styleUrl>#134</styleUrl>
             <Point id="132">
-                <coordinates>6.110674842703793,46.2331370050692,0.0</coordinates>
+                <coordinates>6.110674842703793,46.23313700506921,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="139">
@@ -1288,7 +1288,7 @@ Hits= 3</description>
             <description>Orientation azimuth 13</description>
             <styleUrl>#140</styleUrl>
             <LineString id="138">
-                <coordinates>6.110674842703793,46.2331370050692,0.0 6.109298804491404,46.23235839631023,0.0</coordinates>
+                <coordinates>6.110674842703793,46.23313700506921,0.0 6.109289337671305,46.23235303953064,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="143">
@@ -1303,7 +1303,7 @@ Orient az=  45.41 [Deg]
 Hits= 1897</description>
             <styleUrl>#144</styleUrl>
             <Point id="142">
-                <coordinates>6.10825871085175,46.231339381861076,0.0</coordinates>
+                <coordinates>6.10825871085175,46.23133938186106,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="149">
@@ -1311,7 +1311,7 @@ Hits= 1897</description>
             <description>Orientation azimuth 14</description>
             <styleUrl>#150</styleUrl>
             <LineString id="148">
-                <coordinates>6.10825871085175,46.231339381861076,0.0 6.106049601637313,46.22982834827632,0.0</coordinates>
+                <coordinates>6.10825871085175,46.23133938186106,0.0 6.105931354495216,46.229747463523374,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="153">
@@ -1334,7 +1334,7 @@ Hits= 91</description>
             <description>Orientation azimuth 15</description>
             <styleUrl>#160</styleUrl>
             <LineString id="158">
-                <coordinates>6.105994439882144,46.22903419242537,0.0 6.105641390726148,46.22928268866528,0.0</coordinates>
+                <coordinates>6.105994439882144,46.22903419242537,0.0 6.10509470891867,46.22966746807,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="163">
@@ -1349,7 +1349,7 @@ Orient az=  45.32 [Deg]
 Hits= 600</description>
             <styleUrl>#164</styleUrl>
             <Point id="162">
-                <coordinates>6.106144309157712,46.229815876492665,0.0</coordinates>
+                <coordinates>6.106144309157712,46.22981587649269,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="169">
@@ -1357,7 +1357,7 @@ Hits= 600</description>
             <description>Orientation azimuth 16</description>
             <styleUrl>#170</styleUrl>
             <LineString id="168">
-                <coordinates>6.106144309157712,46.229815876492665,0.0 6.105226846805333,46.229186320481034,0.0</coordinates>
+                <coordinates>6.106144309157712,46.22981587649269,0.0 6.105139769190236,46.22912656731888,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="173">
@@ -1372,7 +1372,7 @@ Orient az=  45.17 [Deg]
 Hits= 558</description>
             <styleUrl>#174</styleUrl>
             <Point id="172">
-                <coordinates>6.105412687833545,46.22886905142751,0.0</coordinates>
+                <coordinates>6.105412687833545,46.22886905142749,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="179">
@@ -1380,7 +1380,7 @@ Hits= 558</description>
             <description>Orientation azimuth 17</description>
             <styleUrl>#180</styleUrl>
             <LineString id="178">
-                <coordinates>6.105412687833545,46.22886905142751,0.0 6.10496690323523,46.22856154307435,0.0</coordinates>
+                <coordinates>6.105412687833545,46.22886905142749,0.0 6.104915420240817,46.22852602906175,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="183">
@@ -1395,7 +1395,7 @@ Orient az=  90.33 [Deg]
 Hits= 1303</description>
             <styleUrl>#184</styleUrl>
             <Point id="182">
-                <coordinates>6.104437609444474,46.22898560718724,0.0</coordinates>
+                <coordinates>6.104437609444474,46.2289856071873,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="189">
@@ -1403,7 +1403,7 @@ Hits= 1303</description>
             <description>Orientation azimuth 18</description>
             <styleUrl>#190</styleUrl>
             <LineString id="188">
-                <coordinates>6.104437609444474,46.22898560718724,0.0 6.103951535479842,46.22898756690097,0.0</coordinates>
+                <coordinates>6.104437609444474,46.2289856071873,0.0 6.103932451546859,46.22898764379989,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="193">
@@ -1426,7 +1426,7 @@ Hits= 54</description>
             <description>Orientation azimuth 19</description>
             <styleUrl>#200</styleUrl>
             <LineString id="198">
-                <coordinates>6.104461921341758,46.228641894937375,0.0 6.1037462980209165,46.22815166630287,0.0</coordinates>
+                <coordinates>6.104461921341758,46.228641894937375,0.0 6.103621961026356,46.228066489478394,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="203">
@@ -1441,7 +1441,7 @@ Orient az=  103.2 [Deg]
 Hits= 376</description>
             <styleUrl>#204</styleUrl>
             <Point id="202">
-                <coordinates>6.107367060152677,46.22141831969024,0.0</coordinates>
+                <coordinates>6.107367060152677,46.22141831969025,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="209">
@@ -1449,7 +1449,7 @@ Hits= 376</description>
             <description>Orientation azimuth 20</description>
             <styleUrl>#210</styleUrl>
             <LineString id="208">
-                <coordinates>6.107367060152677,46.22141831969024,0.0 6.106596119402759,46.22154387612054,0.0</coordinates>
+                <coordinates>6.107367060152677,46.22141831969025,0.0 6.106495635272923,46.22156024067343,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="213">
@@ -1464,7 +1464,7 @@ Orient az=  106.3 [Deg]
 Hits= 11786</description>
             <styleUrl>#214</styleUrl>
             <Point id="212">
-                <coordinates>6.103251767502165,46.22910711161723,0.0</coordinates>
+                <coordinates>6.103251767502165,46.22910711161729,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="219">
@@ -1472,7 +1472,7 @@ Hits= 11786</description>
             <description>Orientation azimuth 21</description>
             <styleUrl>#220</styleUrl>
             <LineString id="218">
-                <coordinates>6.103251767502165,46.22910711161723,0.0 6.102945451092076,46.22916928373439,0.0</coordinates>
+                <coordinates>6.103251767502165,46.22910711161729,0.0 6.102905380060847,46.229177416759505,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="223">
@@ -1487,7 +1487,7 @@ Orient az=  79.82 [Deg]
 Hits= 14</description>
             <styleUrl>#224</styleUrl>
             <Point id="222">
-                <coordinates>6.1099988553413676,46.178766176486306,0.0</coordinates>
+                <coordinates>6.1099988553413676,46.178766176486334,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="229">
@@ -1495,7 +1495,7 @@ Hits= 14</description>
             <description>Orientation azimuth 22</description>
             <styleUrl>#230</styleUrl>
             <LineString id="228">
-                <coordinates>6.1099988553413676,46.178766176486306,0.0 6.106300638162338,46.178305140139706,0.0</coordinates>
+                <coordinates>6.1099988553413676,46.178766176486334,0.0 6.106279906118298,46.17830255523069,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="233">
@@ -1510,7 +1510,7 @@ Orient az=  45.2 [Deg]
 Hits= 73</description>
             <styleUrl>#234</styleUrl>
             <Point id="232">
-                <coordinates>6.102503589854034,46.22832818049933,0.0</coordinates>
+                <coordinates>6.102503589854034,46.228328180499375,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="239">
@@ -1518,7 +1518,7 @@ Hits= 73</description>
             <description>Orientation azimuth 23</description>
             <styleUrl>#240</styleUrl>
             <LineString id="238">
-                <coordinates>6.102503589854034,46.22832818049933,0.0 6.101166465991814,46.227406687208564,0.0</coordinates>
+                <coordinates>6.102503589854034,46.228328180499375,0.0 6.100670252900914,46.22706470475598,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="243">
@@ -1533,7 +1533,7 @@ Orient az=  37.68 [Deg]
 Hits= 1151</description>
             <styleUrl>#244</styleUrl>
             <Point id="242">
-                <coordinates>6.101819380122554,46.22575318283612,0.0</coordinates>
+                <coordinates>6.101819380122554,46.22575318283614,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="249">
@@ -1541,7 +1541,7 @@ Hits= 1151</description>
             <description>Orientation azimuth 24</description>
             <styleUrl>#250</styleUrl>
             <LineString id="248">
-                <coordinates>6.101819380122554,46.22575318283612,0.0 6.100763223013819,46.22480410006092,0.0</coordinates>
+                <coordinates>6.101819380122554,46.22575318283614,0.0 6.100073736848789,46.224184491737866,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="253">
@@ -1556,7 +1556,7 @@ Orient az=  97.87 [Deg]
 Hits= 990</description>
             <styleUrl>#254</styleUrl>
             <Point id="252">
-                <coordinates>6.101087448372902,46.22989172012194,0.0</coordinates>
+                <coordinates>6.101087448372902,46.229891720121934,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="259">
@@ -1564,7 +1564,7 @@ Hits= 990</description>
             <description>Orientation azimuth 25</description>
             <styleUrl>#260</styleUrl>
             <LineString id="258">
-                <coordinates>6.101087448372902,46.22989172012194,0.0 6.100153673952912,46.229981299035686,0.0</coordinates>
+                <coordinates>6.101087448372902,46.229891720121934,0.0 6.100146621169553,46.22998197559366,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="263">
@@ -1579,7 +1579,7 @@ Orient az=  97.84 [Deg]
 Hits= 33316</description>
             <styleUrl>#264</styleUrl>
             <Point id="262">
-                <coordinates>6.1012928897328935,46.22439153308086,0.0</coordinates>
+                <coordinates>6.1012928897328935,46.22439153308089,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="269">
@@ -1587,7 +1587,7 @@ Hits= 33316</description>
             <description>Orientation azimuth 26</description>
             <styleUrl>#270</styleUrl>
             <LineString id="268">
-                <coordinates>6.1012928897328935,46.22439153308086,0.0 6.100259393908636,46.22449030716815,0.0</coordinates>
+                <coordinates>6.1012928897328935,46.22439153308089,0.0 6.10025,46.22449120492579,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="273">
@@ -1602,7 +1602,7 @@ Orient az=  128.0 [Deg]
 Hits= 87</description>
             <styleUrl>#274</styleUrl>
             <Point id="272">
-                <coordinates>6.099810059281804,46.22654279186077,0.0</coordinates>
+                <coordinates>6.099810059281804,46.226542791860794,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="279">
@@ -1610,7 +1610,7 @@ Hits= 87</description>
             <description>Orientation azimuth 27</description>
             <styleUrl>#280</styleUrl>
             <LineString id="278">
-                <coordinates>6.099810059281804,46.22654279186077,0.0 6.099116695509528,46.22691875132342,0.0</coordinates>
+                <coordinates>6.099810059281804,46.226542791860794,0.0 6.098978857819506,46.22699348930696,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="283">
@@ -1625,7 +1625,7 @@ Orient az=  111.37 [Deg]
 Hits= 550</description>
             <styleUrl>#284</styleUrl>
             <Point id="282">
-                <coordinates>6.09939541663876,46.221216930752114,0.0</coordinates>
+                <coordinates>6.09939541663876,46.22121693075215,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="289">
@@ -1633,7 +1633,7 @@ Hits= 550</description>
             <description>Orientation azimuth 28</description>
             <styleUrl>#290</styleUrl>
             <LineString id="288">
-                <coordinates>6.09939541663876,46.221216930752114,0.0 6.095222213026734,46.22235022112902,0.0</coordinates>
+                <coordinates>6.09939541663876,46.22121693075215,0.0 6.095189418607329,46.22235912611205,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="293">
@@ -1648,7 +1648,7 @@ Orient az=  38.0 [Deg]
 Hits= 58</description>
             <styleUrl>#294</styleUrl>
             <Point id="292">
-                <coordinates>6.099506443871794,46.2263834219386,0.0</coordinates>
+                <coordinates>6.099506443871794,46.22638342193859,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="299">
@@ -1656,7 +1656,7 @@ Hits= 58</description>
             <description>Orientation azimuth 29</description>
             <styleUrl>#300</styleUrl>
             <LineString id="298">
-                <coordinates>6.099506443871794,46.2263834219386,0.0 6.098865464050105,46.22581400487418,0.0</coordinates>
+                <coordinates>6.099506443871794,46.22638342193859,0.0 6.098297438964097,46.225309384555956,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="303">
@@ -1671,7 +1671,7 @@ Orient az=  128.15 [Deg]
 Hits= 2986</description>
             <styleUrl>#304</styleUrl>
             <Point id="302">
-                <coordinates>6.097515755711489,46.22416699878384,0.0</coordinates>
+                <coordinates>6.097515755711489,46.22416699878387,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="309">
@@ -1679,7 +1679,7 @@ Hits= 2986</description>
             <description>Orientation azimuth 30</description>
             <styleUrl>#310</styleUrl>
             <LineString id="308">
-                <coordinates>6.097515755711489,46.22416699878384,0.0 6.097123628689746,46.22438076748414,0.0</coordinates>
+                <coordinates>6.097515755711489,46.22416699878387,0.0 6.097067231762096,46.22441151211555,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="313">
@@ -1694,7 +1694,7 @@ Orient az=  111.25 [Deg]
 Hits= 15147</description>
             <styleUrl>#314</styleUrl>
             <Point id="312">
-                <coordinates>6.095846543388579,46.22318056993744,0.0</coordinates>
+                <coordinates>6.095846543388579,46.22318056993745,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="319">
@@ -1702,7 +1702,7 @@ Hits= 15147</description>
             <description>Orientation azimuth 31</description>
             <styleUrl>#320</styleUrl>
             <LineString id="318">
-                <coordinates>6.095846543388579,46.22318056993744,0.0 6.092437143042338,46.22410058876342,0.0</coordinates>
+                <coordinates>6.095846543388579,46.22318056993745,0.0 6.092448820469878,46.22409743786282,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="323">
@@ -1717,7 +1717,7 @@ Orient az=  106.73 [Deg]
 Hits= 12</description>
             <styleUrl>#324</styleUrl>
             <Point id="322">
-                <coordinates>6.091590261213809,46.22212652029472,0.0</coordinates>
+                <coordinates>6.091590261213809,46.2221265202947,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="329">
@@ -1725,7 +1725,7 @@ Hits= 12</description>
             <description>Orientation azimuth 32</description>
             <styleUrl>#330</styleUrl>
             <LineString id="328">
-                <coordinates>6.091590261213809,46.22212652029472,0.0 6.090763657862333,46.22229890527855,0.0</coordinates>
+                <coordinates>6.091590261213809,46.2221265202947,0.0 6.090759575061734,46.22229975671361,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="333">
@@ -1740,7 +1740,7 @@ Orient az=  135.11 [Deg]
 Hits= 72</description>
             <styleUrl>#334</styleUrl>
             <Point id="332">
-                <coordinates>6.098101285836445,46.23485402252012,0.0</coordinates>
+                <coordinates>6.098101285836445,46.234854022520125,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="339">
@@ -1748,7 +1748,7 @@ Hits= 72</description>
             <description>Orientation azimuth 33</description>
             <styleUrl>#340</styleUrl>
             <LineString id="338">
-                <coordinates>6.098101285836445,46.23485402252012,0.0 6.097938614667968,46.234967332332445,0.0</coordinates>
+                <coordinates>6.098101285836445,46.234854022520125,0.0 6.097929680590519,46.234973555410306,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="343">
@@ -1763,7 +1763,7 @@ Orient az=  133.69 [Deg]
 Hits= 848</description>
             <styleUrl>#344</styleUrl>
             <Point id="342">
-                <coordinates>6.080918629343064,46.21973269840252,0.0</coordinates>
+                <coordinates>6.080918629343064,46.21973269840256,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="349">
@@ -1771,7 +1771,7 @@ Hits= 848</description>
             <description>Orientation azimuth 34</description>
             <styleUrl>#350</styleUrl>
             <LineString id="348">
-                <coordinates>6.080918629343064,46.21973269840252,0.0 6.0798808037854,46.22042051477356,0.0</coordinates>
+                <coordinates>6.080918629343064,46.21973269840256,0.0 6.079876779334752,46.22042318191653,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="353">
@@ -1786,7 +1786,7 @@ Orient az=  226.85 [Deg]
 Hits= 16</description>
             <styleUrl>#354</styleUrl>
             <Point id="352">
-                <coordinates>6.084017276311591,46.23318649058197,0.0</coordinates>
+                <coordinates>6.084017276311591,46.233186490581986,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="359">
@@ -1794,7 +1794,7 @@ Hits= 16</description>
             <description>Orientation azimuth 35</description>
             <styleUrl>#360</styleUrl>
             <LineString id="358">
-                <coordinates>6.084017276311591,46.23318649058197,0.0 6.0845827705232285,46.233554504439674,0.0</coordinates>
+                <coordinates>6.084017276311591,46.233186490581986,0.0 6.085549700403771,46.23418374775757,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="363">
@@ -1809,7 +1809,7 @@ Orient az=  225.26 [Deg]
 Hits= 329</description>
             <styleUrl>#364</styleUrl>
             <Point id="362">
-                <coordinates>6.083448842842558,46.234187274991896,0.0</coordinates>
+                <coordinates>6.083448842842558,46.234187274991925,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="369">
@@ -1817,7 +1817,7 @@ Hits= 329</description>
             <description>Orientation azimuth 36</description>
             <styleUrl>#370</styleUrl>
             <LineString id="368">
-                <coordinates>6.083448842842558,46.234187274991896,0.0 6.083889308972335,46.23449029465369,0.0</coordinates>
+                <coordinates>6.083448842842558,46.234187274991925,0.0 6.084395007447158,46.23483818482784,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="373">
@@ -1832,7 +1832,7 @@ Orient az=  135.5 [Deg]
 Hits= 707</description>
             <styleUrl>#374</styleUrl>
             <Point id="372">
-                <coordinates>6.083103464560248,46.23567265784402,0.0</coordinates>
+                <coordinates>6.083103464560248,46.235672657844006,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="379">
@@ -1840,7 +1840,7 @@ Hits= 707</description>
             <description>Orientation azimuth 37</description>
             <styleUrl>#380</styleUrl>
             <LineString id="378">
-                <coordinates>6.083103464560248,46.23567265784402,0.0 6.082567278903239,46.236051109970006,0.0</coordinates>
+                <coordinates>6.083103464560248,46.235672657844006,0.0 6.082449057511378,46.23613455229617,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="383">
@@ -1855,7 +1855,7 @@ Orient az=  135.18 [Deg]
 Hits= 78</description>
             <styleUrl>#384</styleUrl>
             <Point id="382">
-                <coordinates>6.082512841094364,46.23744885176208,0.0</coordinates>
+                <coordinates>6.082512841094364,46.23744885176209,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="389">
@@ -1863,7 +1863,7 @@ Hits= 78</description>
             <description>Orientation azimuth 38</description>
             <styleUrl>#390</styleUrl>
             <LineString id="388">
-                <coordinates>6.082512841094364,46.23744885176208,0.0 6.081310607677282,46.23828793877494,0.0</coordinates>
+                <coordinates>6.082512841094364,46.23744885176209,0.0 6.080757952451409,46.23867364620045,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="393">
@@ -1878,7 +1878,7 @@ Orient az=  224.9 [Deg]
 Hits= 58</description>
             <styleUrl>#394</styleUrl>
             <Point id="392">
-                <coordinates>6.099130232405289,46.23883218141155,0.0</coordinates>
+                <coordinates>6.099130232405289,46.238832181411546,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="399">
@@ -1886,7 +1886,7 @@ Hits= 58</description>
             <description>Orientation azimuth 39</description>
             <styleUrl>#400</styleUrl>
             <LineString id="398">
-                <coordinates>6.099130232405289,46.23883218141155,0.0 6.099183479282613,46.23886925840251,0.0</coordinates>
+                <coordinates>6.099130232405289,46.238832181411546,0.0 6.099183529290545,46.238869293224134,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="403">
@@ -1901,7 +1901,7 @@ Orient az=  229.2 [Deg]
 Hits= 649</description>
             <styleUrl>#404</styleUrl>
             <Point id="402">
-                <coordinates>6.097005096296457,46.24066002336074,0.0</coordinates>
+                <coordinates>6.097005096296457,46.24066002336077,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="409">
@@ -1909,7 +1909,7 @@ Hits= 649</description>
             <description>Orientation azimuth 40</description>
             <styleUrl>#410</styleUrl>
             <LineString id="408">
-                <coordinates>6.097005096296457,46.24066002336074,0.0 6.098236543848226,46.241397604565165,0.0</coordinates>
+                <coordinates>6.097005096296457,46.24066002336077,0.0 6.098279777212988,46.24142349878698,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="413">
@@ -1924,7 +1924,7 @@ Orient az=  236.06 [Deg]
 Hits= 12</description>
             <styleUrl>#414</styleUrl>
             <Point id="412">
-                <coordinates>6.0968754195003,46.24080340489536,0.0</coordinates>
+                <coordinates>6.0968754195003,46.24080340489538,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="419">
@@ -1932,7 +1932,7 @@ Hits= 12</description>
             <description>Orientation azimuth 41</description>
             <styleUrl>#420</styleUrl>
             <LineString id="418">
-                <coordinates>6.0968754195003,46.24080340489536,0.0 6.097130957751932,46.240922739570884,0.0</coordinates>
+                <coordinates>6.0968754195003,46.24080340489538,0.0 6.097131649632516,46.24092306267309,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="423">
@@ -1947,7 +1947,7 @@ Orient az=  225.85 [Deg]
 Hits= 511</description>
             <styleUrl>#424</styleUrl>
             <Point id="422">
-                <coordinates>6.097447068726141,46.24070120144579,0.0</coordinates>
+                <coordinates>6.097447068726141,46.24070120144581,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="429">
@@ -1955,7 +1955,7 @@ Hits= 511</description>
             <description>Orientation azimuth 42</description>
             <styleUrl>#430</styleUrl>
             <LineString id="428">
-                <coordinates>6.097447068726141,46.24070120144579,0.0 6.097612756563002,46.240812810637195,0.0</coordinates>
+                <coordinates>6.097447068726141,46.24070120144581,0.0 6.097614838310864,46.240814212921556,0.0</coordinates>
             </LineString>
         </Placemark>
         <Placemark id="433">
@@ -1970,7 +1970,7 @@ Orient az=  236.04 [Deg]
 Hits= 2145</description>
             <styleUrl>#434</styleUrl>
             <Point id="432">
-                <coordinates>6.097810375301283,46.241454656362215,0.0</coordinates>
+                <coordinates>6.097810375301283,46.24145465636224,0.0</coordinates>
             </Point>
         </Placemark>
         <Placemark id="439">
@@ -1978,7 +1978,7 @@ Hits= 2145</description>
             <description>Orientation azimuth 43</description>
             <styleUrl>#440</styleUrl>
             <LineString id="438">
-                <coordinates>6.097810375301283,46.241454656362215,0.0 6.098269064849379,46.24166901401608,0.0</coordinates>
+                <coordinates>6.097810375301283,46.24145465636224,0.0 6.098279485278913,46.24167388371523,0.0</coordinates>
             </LineString>
         </Placemark>
     </Document>
